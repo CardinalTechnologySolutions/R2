@@ -10,7 +10,7 @@ export class Items {
   defaultItem: any = {
         "name": "Lucknow",
         "profilePic": "assets/img/speakers/bear.jpg",
-        "about": "Navabon ka saher.",
+        "about": "Lucknow, a large city in northern India, is the capital of the state of Uttar Pradesh. Toward its center is Rumi Darwaza, a Mughal gateway. Nearby, the 18th-century Bara Imambara shrine has a huge arched hall. Upstairs, Bhool Bhulaiya is a maze of narrow tunnels with city views from its upper balconies. Close by, the grand Victorian Husainabad Clock Tower was built as a victory column in 1881.",
   };
 
 
@@ -19,7 +19,7 @@ export class Items {
       {
         "name": "Lucknow",
         "profilePic": "assets/img/speakers/bear.jpg",
-        "about": "Navabon ka saher."
+        "about": "Lucknow, a large city in northern India, is the capital of the state of Uttar Pradesh. Toward its center is Rumi Darwaza, a Mughal gateway. Nearby, the 18th-century Bara Imambara shrine has a huge arched hall. Upstairs, Bhool Bhulaiya is a maze of narrow tunnels with city views from its upper balconies. Close by, the grand Victorian Husainabad Clock Tower was built as a victory column in 1881."
       },
       {
         "name": "Charlie Cheetah",
