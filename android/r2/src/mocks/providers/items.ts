@@ -8,18 +8,18 @@ export class Items {
   items: Item[] = [];
 
   defaultItem: any = {
-    "name": "Burt Bear",
-    "profilePic": "assets/img/speakers/bear.jpg",
-    "about": "Burt is a Bear.",
+        "name": "Lucknow",
+        "profilePic": "assets/img/speakers/bear.jpg",
+        "about": "Navabon ka saher.",
   };
 
 
   constructor(public http: Http) {
     let items = [
       {
-        "name": "Burt Bear",
+        "name": "Lucknow",
         "profilePic": "assets/img/speakers/bear.jpg",
-        "about": "Burt is a Bear."
+        "about": "Navabon ka saher."
       },
       {
         "name": "Charlie Cheetah",
