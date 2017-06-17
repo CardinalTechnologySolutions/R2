@@ -7,8 +7,7 @@ import 'rxjs/add/operator/map';
  */
 @Injectable()
 export class Api {
-  url: string = 'https://example.com/api/v1';
-
+	url: string = 'http://localhost:8080/ctswebscrapingservices';
   constructor(public http: Http) {
   }
 
@@ -30,7 +29,7 @@ export class Api {
 
     return this.http.get(this.url + '/' + endpoint, options);
   }
-
+  
   post(endpoint: string, body: any, options?: RequestOptions) {
     return this.http.post(this.url + '/' + endpoint, body, options);
   }
@@ -46,4 +45,5 @@ export class Api {
   patch(endpoint: string, body: any, options?: RequestOptions) {
     return this.http.put(this.url + '/' + endpoint, body, options);
   }
+  
 }

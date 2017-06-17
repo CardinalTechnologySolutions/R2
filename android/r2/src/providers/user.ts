@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
+import { Http, RequestOptions, Headers, RequestMethod} from '@angular/http';
 import { Api } from './api';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/toPromise';
@@ -35,21 +35,30 @@ export class User {
    * the user entered on the form.
    */
   login(accountInfo: any) {
-    let seq = this.api.post('login', accountInfo).share();
+		let headers = new Headers();
+        headers.append('Content-Type', 'application/x-www-form-urlencoded');
+        let urlSearchParams = new URLSearchParams();
+        urlSearchParams.append('username', accountInfo.username);
+        urlSearchParams.append('password', accountInfo.password);
+		urlSearchParams.append('client_id', accountInfo.clientId);
+		urlSearchParams.append('client_secret', accountInfo.clientSecret);
+		urlSearchParams.append('grant_type', accountInfo.grantType);
+        let body = urlSearchParams.toString();
+		let options = new RequestOptions({headers:headers, method: RequestMethod.Post});
+		let seq = this.api.post('oauth/token', body, options).share();
+		seq
+		  .map(res => res.json())
+		  .subscribe(res => {
+			// If the API returned a successful response, mark the user as logged in
+			if (res.status == 'success') {
+			  this._loggedIn(res);
+			} else {
+			}
+		  }, err => {
+			console.error('ERROR', err);
+		  });
 
-    seq
-      .map(res => res.json())
-      .subscribe(res => {
-        // If the API returned a successful response, mark the user as logged in
-        if (res.status == 'success') {
-          this._loggedIn(res);
-        } else {
-        }
-      }, err => {
-        console.error('ERROR', err);
-      });
-
-    return seq;
+		return seq;
   }
 
   /**
@@ -57,7 +66,8 @@ export class User {
    * the user entered on the form.
    */
   signup(accountInfo: any) {
-    let seq = this.api.post('signup', accountInfo).share();
+    let seq 
+	/*= this.api.post('signup', accountInfo).share();
 
     seq
       .map(res => res.json())
@@ -68,7 +78,7 @@ export class User {
         }
       }, err => {
         console.error('ERROR', err);
-      });
+      });*/
 
     return seq;
   }
