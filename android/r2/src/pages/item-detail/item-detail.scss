@@ -7,8 +7,15 @@ page-item-detail {
   }
 
   .item-detail {
-    width: 100%;
+    width:100%;
     background: white;
     position: absolute;
+  }
+  .detail-box{
+    margin: auto;
+  }
+  .detail-box h2{
+   text-align:center;
+   color:#980207;
   }
 }

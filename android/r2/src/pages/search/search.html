@@ -10,6 +10,7 @@
 
 
 <ion-content>
+<div ion-col col-md-7 class="search-position">
   <ion-searchbar (ionInput)="getItems($event)" placeholder="{{ 'SEARCH_PLACEHOLDER' | translate }}"></ion-searchbar>
   <ion-list>
     <button ion-item (click)="openItem(item)" *ngFor="let item of currentItems">
@@ -21,4 +22,5 @@
       <ion-note item-end *ngIf="item.note">{{item.note}}</ion-note>
     </button>
   </ion-list>
+</div>  
 </ion-content>

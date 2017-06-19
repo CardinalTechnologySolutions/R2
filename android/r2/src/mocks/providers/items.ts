@@ -9,6 +9,7 @@ export class Items {
 
   defaultItem: any = {
         "name": "Lucknow",
+		"rating": "*****",
         "profilePic": "assets/img/speakers/bear.jpg",
         "about": "Lucknow, a large city in northern India, is the capital of the state of Uttar Pradesh. Toward its center is Rumi Darwaza, a Mughal gateway. Nearby, the 18th-century Bara Imambara shrine has a huge arched hall. Upstairs, Bhool Bhulaiya is a maze of narrow tunnels with city views from its upper balconies. Close by, the grand Victorian Husainabad Clock Tower was built as a victory column in 1881.",
   };
@@ -18,36 +19,43 @@ export class Items {
     let items = [
       {
         "name": "Lucknow",
+		"rating": "*****",
         "profilePic": "assets/img/speakers/bear.jpg",
         "about": "Lucknow, a large city in northern India, is the capital of the state of Uttar Pradesh. Toward its center is Rumi Darwaza, a Mughal gateway. Nearby, the 18th-century Bara Imambara shrine has a huge arched hall. Upstairs, Bhool Bhulaiya is a maze of narrow tunnels with city views from its upper balconies. Close by, the grand Victorian Husainabad Clock Tower was built as a victory column in 1881."
       },
       {
         "name": "Charlie Cheetah",
+		"rating": "*****",
         "profilePic": "assets/img/speakers/cheetah.jpg",
         "about": "Charlie is a Cheetah."
       },
       {
         "name": "Donald Duck",
+		"rating": "*****",
         "profilePic": "assets/img/speakers/duck.jpg",
         "about": "Donald is a Duck."
       },
       {
         "name": "Eva Eagle",
+		"rating": "*****",
         "profilePic": "assets/img/speakers/eagle.jpg",
         "about": "Eva is an Eagle."
       },
       {
         "name": "Ellie Elephant",
+		"rating": "*****",
         "profilePic": "assets/img/speakers/elephant.jpg",
         "about": "Ellie is an Elephant."
       },
       {
         "name": "Molly Mouse",
+		"rating": "*****",
         "profilePic": "assets/img/speakers/mouse.jpg",
         "about": "Molly is a Mouse."
       },
       {
         "name": "Paul Puppy",
+		"rating": "*****",
         "profilePic": "assets/img/speakers/puppy.jpg",
         "about": "Paul is a Puppy."
       }

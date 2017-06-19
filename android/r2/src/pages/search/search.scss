@@ -1,4 +1,9 @@
 page-search {
+    .search-position{
+      margin:auto;
+	  position:relative;
+	  top:20%;
+   }
    .toolbar-title-md {
     color: #2687ff;
 }
@@ -7,5 +12,12 @@ page-search {
 }
 .searchbar-md .searchbar-search-icon, .searchbar-md .searchbar-md-cancel {
     top: 38px;
+}
+.searchbar-md .searchbar-input{
+  box-shadow:none;
+  border: 1px solid #780000;
+}
+page-search .searchbar-md .searchbar-input {
+    box-shadow: none;
 }
 }
