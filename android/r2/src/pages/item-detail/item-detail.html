@@ -9,10 +9,101 @@
 
 <ion-content>
 <div class="item-profile" text-center #profilePic [style.background-image]="'url(' + item.profilePic + ')'">
-</div> 
-<div ion-col col-md-11  class="detail-box">
+</div>
+<div class="container"> 
+<div class="col-md-12 detail-box">
         <h2>Search Results</h2>
 		<h3> results were found for Keyword</h3>
+		<div  class="col-md-3">
+		    <form class="form-horizontal">
+        
+          <div class="form-group">
+          <h4>Result Filter</h4>
+            <label for="location1" class="control-label">Proximity(Miles)</label>
+            <select class="form-control" name="" id="location1">
+              <option value="">Any</option>
+              <option value="">2</option>
+              <option value="">5</option>
+               <option value="">8</option>
+              <option value="">10</option>
+               <option value="">15</option>
+              <option value="">20</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="type1" class="control-label">Cuisine</label>
+            <select class="form-control" name="" id="type1">
+               <option value="">Any</option>
+              <option value="">Chinese</option>
+              <option value="">Indian</option>
+              <option value="">Italian</option>
+              <option value="">American</option>
+              <option value="">Spanish</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="pricefrom" class="control-label">Review Score</label>
+            <div class="input-group">
+              <div class="checkbox">
+  					<label><input type="checkbox" value="">Excelled</label>
+			</div>
+			<div class="checkbox">
+ 				 <label><input type="checkbox" value="">Good</label>
+			</div>
+			<div class="checkbox">
+  				<label><input type="checkbox" value="">Ok</label>
+			</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="priceto" class="control-label">Rating</label>
+            <div class="input-group">
+             <ul><a href=#><img src="assets/img/rating/1.png" height="20" width="80" /> </a> </ul>
+
+            </div>
+          </div>
+  			<div class="form-group">
+            <label for="priceto" class="control-label">Price</label>
+            <div class="input-group">
+           	 $  <input type="text" size = "3"> to $ <input type="text" size = "3">
+            </div>
+          </div>
+        
+        </form>
+		
+		</div>
+		<div class="col-md-9">
+			<div class="col-md-3">
+				<a href="#">
+					<img class="img-responsive" style="width: 200px; height: 144px;" src="assets/img/restaurant/1.jpg" alt=""> 
+				 </a>
+			</div>
+			<div class="col-md-2">
+				<ul class="meta-search">
+   					 	<li><img src="assets/img/rating/0.5.png" height="20" width="100" title="" /></li>
+				</ul>
+			</div>
+			<div  class="col-md-7">
+				<!-- <h3><font color="red"><a href="#" title="" target="_blank"></a></font></h3> -->
+			
+       						<div class="col-md-4 col-md-offset-1">
+								<img src="assets/img/rating/0.5.png" height="23" width="90" title="" />  <font face="calibri" size="4px"><br><b>Yelp</b></font>
+							</div>
+    				
+       						<div class="col-md-4 col-md-offset-1">
+								<img src="assets/img/rating/0.5.png" height="23" width="90" title="" />  <font face="calibri" size="4px"><br><b>Google Reviews</b></font>
+							</div>
+		
+       						<div class="col-md-4 col-md-offset-1">
+								<img src="assets/img/rating/0.5.png" height="23" width="90" title=""  />  <font face="calibri" size="4px"><br><b>Trip Advisor</b></font>
+							</div>
+    				
+       						<div class="col-md-4 col-md-offset-1">
+								<img src="assets/img/rating/0.5.png" height="23" width="90" title="" />  <font face="calibri" size="4px"><br><b>Four Square</b></font>
+							</div>
+			</div>
+		</div>
+</div>
 </div>
  
 </ion-content>
