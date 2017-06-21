@@ -1,4 +1,8 @@
 page-login {
+   .bg-container{ 
+   background:url('../img/main-bg.jpg');
+   background-repeat:repeat;
+   }
    .login-bx{
       margin:auto;
 	  position:relative;
@@ -7,4 +11,9 @@ page-login {
    .button-md{
     background:#780000;
    }
+   .copy-r{
+   text-align:center;
+   font-size:12px;
+   color:#980207;
+  }
 }
