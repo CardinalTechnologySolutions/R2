@@ -13,7 +13,14 @@ page-welcome {
     from { background-position: 0 0; }
     to { background-position: 100% 0; }
   }
-  .bx-position{margin:auto; position:relative; top:5%; border:1px solid #ABCDE9; background:rgb(0,162,255),0.5;}
+  .bx-position{
+    margin:auto; 
+	position:relative; 
+	top:5%; 
+	box-shadow: 1px 1px 5px #ccc; 
+	background:rgb(0,162,255),0.5;
+	}
+	
   .splash-info {
     position: relative;
     z-index: 2;

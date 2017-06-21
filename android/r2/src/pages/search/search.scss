@@ -1,19 +1,22 @@
 page-search {
     .search-position{
      margin:auto;
+	 padding:30px 0;
    }
-   
+   h2{
+   Color:#666;
+   }
    h3{
    padding: 0 15px;
    }
+   .label-md{
+    text-align:left;
+   }
    .deal-text{
     text-align:center;
-	color:#666;
+	color: rebeccapurple;
    }
-   
-   .toolbar-title-md {
-     color: #2687ff;
-}
+
 .searchbar-input-container {
     padding: 28px 0 0 0;
 }
@@ -39,6 +42,7 @@ page-search .searchbar-md .searchbar-input {
 .item-avatar img{
     width:50%;
 }
+
 .copy-r{
    text-align:center;
    font-size:12px;

@@ -15,6 +15,7 @@ page-item-detail {
   }
   .detail-box{
     margin: auto;
+	padding:30px 0;
   }
   .detail-box h2{
    color:#980207;
@@ -28,5 +29,15 @@ page-item-detail {
    text-align:center;
    font-size:12px;
    color:#980207;
+  }
+  .form-horizontal{
+   border-right:1px solid #ccc;
+   padding-right: 25px;
+  }
+  .input-group ul{
+   padding-left:0;  
+  }
+  .s-result-box{
+   border:1px solid #ccc;
   }
 }
