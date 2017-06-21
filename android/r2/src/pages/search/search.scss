@@ -1,23 +1,43 @@
 page-search {
     .search-position{
-      margin:auto;
-	  position:relative;
-	  top:20%;
+     margin:auto;
    }
+   
+   h3{
+   padding: 0 15px;
+   }
+   
    .toolbar-title-md {
-    color: #2687ff;
+     color: #2687ff;
 }
 .searchbar-input-container {
     padding: 28px 0 0 0;
 }
+
 .searchbar-md .searchbar-search-icon, .searchbar-md .searchbar-md-cancel {
     top: 38px;
 }
-.searchbar-md .searchbar-input{
-  box-shadow:none;
-  border: 1px solid #780000;
-}
+
 page-search .searchbar-md .searchbar-input {
-    box-shadow: none;
+    background-color: #f2f2f2;
 }
+
+.float-box{
+    float:left;
+	padding:15px;
+	margin:auto;
+}
+
+.item-box-position{
+    margin:50px 0 0 0;
+}
+
+.item-avatar img{
+    width:50%;
+}
+.copy-r{
+   text-align:center;
+   font-size:12px;
+   color:#980207;
+  }
 }

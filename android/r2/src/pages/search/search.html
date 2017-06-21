@@ -1,5 +1,4 @@
 <ion-header>
-
   <ion-navbar>
     <ion-title>
 	{{ 'SEARCH_TITLE' | translate }}
@@ -10,8 +9,8 @@
 
 
 <ion-content>
-<div ion-col col-md-7 class="search-position">
-  <ion-searchbar (ionInput)="getItems($event)" placeholder="{{ 'SEARCH_PLACEHOLDER' | translate }}"></ion-searchbar>
+<div ion-col col-md-10 class="search-position">
+  <ion-searchbar (ionInput)="getItems($event)" placeholder="{{ '' | translate }}"></ion-searchbar>
   <ion-list>
     <button ion-item (click)="openItem(item)" *ngFor="let item of currentItems">
       <ion-avatar item-start>
@@ -22,5 +21,82 @@
       <ion-note item-end *ngIf="item.note">{{item.note}}</ion-note>
     </button>
   </ion-list>
-</div>  
+<div ion-col col-md-12 class="item-box-position">
+    <h3>Top Deals</h3>
+   <div ion-col col-md-4 class="float-box">
+	<div class="list card">
+		  <div class="item item-avatar">
+			<img src="assets/img/rundmc-live.png">
+			<h2>Marty McFly</h2>
+			<p>November 05, 1955</p>
+		  </div>
+
+		  <div class="item item-body">
+			<img class="full-image" src="assets/img/queen-live.png">
+			<p>
+			  This is a "Facebook" styled Card. The header is created from a Thumbnail List item,
+			  the content is from a card-body consisting of an image and paragraph text. The footer
+			  consists of tabs, icons aligned left, within the card-footer.
+			</p>
+			<p>
+			  <a href="#" class="subdued">1 Like</a>
+			  <a href="#" class="subdued">5 Comments</a>
+			</p>
+		  </div>
+    </div>
+	</div>
+	 <div ion-col col-md-4 class="float-box">
+	<div class="list card">
+		  <div class="item item-avatar">
+			<img src="assets/img/rundmc-live.png">
+			<h2>Marty McFly</h2>
+			<p>November 05, 1955</p>
+		  </div>
+
+		  <div class="item item-body">
+			<img class="full-image" src="assets/img/advance-card-tmntr.jpg">
+			<p>
+			  This is a "Facebook" styled Card. The header is created from a Thumbnail List item,
+			  the content is from a card-body consisting of an image and paragraph text. The footer
+			  consists of tabs, icons aligned left, within the card-footer.
+			</p>
+			<p>
+			  <a href="#" class="subdued">1 Like</a>
+			  <a href="#" class="subdued">5 Comments</a>
+			</p>
+		  </div>
+    </div>
+	</div>
+	 <div ion-col col-md-4 class="float-box">
+	<div class="list card">
+		  <div class="item item-avatar">
+			<img src="assets/img/rundmc-live.png">
+			<h2>Marty McFly</h2>
+			<p>November 05, 1955</p>
+		  </div>
+
+		  <div class="item item-body">
+			<img class="full-image" src="assets/img/badu-live.png">
+			<p>
+			  This is a "Facebook" styled Card. The header is created from a Thumbnail List item,
+			  the content is from a card-body consisting of an image and paragraph text. The footer
+			  consists of tabs, icons aligned left, within the card-footer.
+			</p>
+			<p>
+			  <a href="#" class="subdued">1 Like</a>
+			  <a href="#" class="subdued">5 Comments</a>
+			</p>
+		  </div>
+    </div>
+	</div>
+
+
+</div>
+</div>
+  
 </ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-title><div class="copy-r">Copyright 2017 Rating & Review | All rights reserved.</div></ion-title>
+  </ion-toolbar>
+</ion-footer>
