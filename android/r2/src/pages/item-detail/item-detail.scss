@@ -66,6 +66,7 @@ page-item-detail {
     border: solid 1px #b1b1b1;
     box-shadow: 0px 0px 2px 0 #ccc;
     margin-bottom: 15px;
+    float: left;
 }
 h3{
    padding: 0px;
@@ -96,4 +97,13 @@ h3::before {
 col-md-offset-1{
    padding:0;
 }
+
+@media (max-width:767px) {
+.result-filter {
+    margin-right: 0 !important;
+    margin-bottom: 15px;
+}
+
+}
+
 }

@@ -39,6 +39,9 @@ page-signup {
     text-align: left;
 	margin-bottom: 0;
 }
+.list-md div[padding] {
+    padding: 16px 0 0 16px;
+}
 @media (max-width:767px) {
 .signup-bx {
     margin-top: 140px;
