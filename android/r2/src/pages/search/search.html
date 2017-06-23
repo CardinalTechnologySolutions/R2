@@ -1,3 +1,4 @@
+<script src="assets/js/custom.js"></script>
 <ion-header>
   <ion-navbar>
     <ion-title>
@@ -10,7 +11,7 @@
 
 <ion-content>
 <div class="container search-position">
-   <h2 class="deal-text">Find your ideal hotel for the best price</h2>
+   <h2 class="deal-text text-js">Find your ideal hotel for the best price</h2>
   <ion-searchbar (ionInput)="getItems($event)" placeholder="{{ '' | translate }}"></ion-searchbar>
   <ion-list>
     <button ion-item (click)="openItem(item)" *ngFor="let item of currentItems">
@@ -24,8 +25,8 @@
   </ion-list>
 <div class="col-md-12 item-box-position">
     <h3>Top Deals</h3>
-   <div class="col-md-4">
-	<div class="list card">
+   <div class="col-md-4 paddingLeft0">
+	<div class="list card  result-box">
 		  <div class="item item-avatar">
 			<img src="assets/img/restaurant/4.jpg">
 			<h4>Hotel Pennsylvania</h4>
@@ -47,7 +48,7 @@
     </div>
 	</div>
 	 <div class="col-md-4">
-	<div class="list card">
+	<div class="list card  result-box">
 		  <div class="item item-avatar">
 			<img src="assets/img/restaurant/5.jpg">
 			<h4>Row NYC</h4>
@@ -68,8 +69,8 @@
 		  </div>
     </div>
 	</div>
-	 <div  class="col-md-4">
-	<div class="list card">
+	 <div  class="col-md-4 paddingRight0">
+	<div class="list card  result-box">
 		  <div class="item item-avatar">
 			<img src="assets/img/restaurant/6.jpg">
 			<h4>Hotel Stanford NYC</h4>
@@ -98,3 +99,6 @@
     <ion-title><div class="copy-r">Copyright 2017 Rating & Review | All rights reserved.</div></ion-title>
   </ion-toolbar>
 </ion-footer>
+
+
+

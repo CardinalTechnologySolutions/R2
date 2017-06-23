@@ -7,7 +7,9 @@ page-search {
    Color:#666;
    }
    h3{
-   padding: 0 15px;
+   padding: 0px;
+   position:relative;
+   margin-bottom:25px;
    }
    .label-md{
     text-align:left;
@@ -24,6 +26,9 @@ page-search {
 .searchbar-md .searchbar-search-icon, .searchbar-md .searchbar-md-cancel {
     top: 38px;
 }
+.searchbar-md {
+    padding: 10px;
+}
 
 page-search .searchbar-md .searchbar-input {
     background-color: #f2f2f2;
@@ -36,17 +41,100 @@ page-search .searchbar-md .searchbar-input {
 }
 
 .item-box-position{
-    margin:50px 0 0 0;
-	background-color:#fff;
+    margin: 10px 0 0 0;
+    padding: 0;
 }
 
-.item-avatar img{
-    width:50%;
+.result-box {
+    background: #fff;
+    box-shadow: 0 0 5px 0 #ccc;
+    padding: 15px;
+}
+h3::before {
+    position: absolute;
+    content: "";
+    width: 5%;
+    height: 3px;
+    border-radius: 5px;
+    background: #488AFF;
+    bottom: -8px;
+}
+input.searchbar-input {
+    box-shadow: inherit !important;
+    border: solid 1px #ccc;
+    border-radius: 20px !important;
+}
+.searchbar-has-value input.searchbar-input  {
+	border-radius: 10px 10px 0px 0px !important;
+}
+.searchbar-md .searchbar-search-icon {
+    top: 41px;
+}
+.searchbar-md .searchbar-clear-icon {
+    top: 37px;
+	height: 25px;
+}
+.button-clear-md:hover:not(.disable-hover) {
+    background-color: transparent;
+}
+h2.deal-text {
+    color: #488aff;
+    text-transform: uppercase;
 }
 
-.copy-r{
-   text-align:center;
-   font-size:12px;
-   color:#980207;
+.text-js{
+  opacity: 1;
+}
+.cursor{
+  display: block;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  right: -5px;
+  width: 2px;
+  /* Change colour of Cursor Here */
+  background-color: white;
+  z-index: 1;
+  animation: flash 0.5s none infinite alternate;
+}
+@keyframes flash{
+  0%{
+    opacity: 1;
   }
+  100%{
+    opacity: 0;
+  }
+}
+ion-list.list.list-md {
+    position: relative;
+    top: 2px;
+}
+.searchbar-md {
+    padding: 0px;
+}
+.paddingLeft0 {
+    padding-left:0;
+}
+.paddingRight0 {
+    padding-right:0;
+
+}
+
+
+
+@media (max-width:767px) {
+h2.deal-text {
+    padding: 0 15px;
+}
+.searchbar-md {
+    padding: 15px;
+}
+h3::before {
+    width: 15%;
+}
+.result-box {
+    margin: 15px 0;
+}
+}
+
 }

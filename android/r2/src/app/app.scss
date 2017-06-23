@@ -16,5 +16,28 @@
 // automatically applied to the <body> element in the app.
 
 .scroll-content {
-  background: url('../assets/img/furley_bg.png') repeat transparent;
+  background:#f7f7f7;
+  overflow-y: initial;
+}
+.header-md .toolbar-background.toolbar-background-md {
+    background: #488aff;
+}
+.bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default {
+    color: #ffffff;
+    background-color: transparent;
+}
+.toolbar-title-md {
+    color: #ffffff;
+}
+.bar-button-default-md:hover:not(.disable-hover), .bar-button-clear-md-default:hover:not(.disable-hover), .bar-button-md-default:hover:not(.disable-hover) {
+    color: #efefef;
+}
+.toolbar-background-md {
+    border-color: #000000;
+    background: #4a4a4a;
+}
+.copy-r {
+    text-align: center;
+    font-size: 12px;
+    color: #ffffff;
 }
