@@ -5,7 +5,28 @@
 </ion-header>
 <ion-content>
 <div class="item-profile" text-center #profilePic [style.background-image]="'url(' + item.profilePic + ')'">
- <ion-searchbar (ionInput)="getItems($event)" placeholder="{{ '' | translate }}"></ion-searchbar>
+	<div class="container">
+		<div class="col-md-12">
+		<ion-searchbar (ionInput)="getItems($event)" placeholder="{{ '' | translate }}"></ion-searchbar>
+		</div>
+		<div class="col-md-4">
+		A
+		</div>
+		<div class="col-md-4">
+		B
+		</div>
+		<div class="col-md-4">
+		<div class="form-group">
+            <label for="type1" class="control-label">Select Room</label>
+            <select class="form-control" name="" id="type1">
+               <option value="">Single room</option>
+              <option value="">Double room</option>
+              <option value="">Family room</option>
+              <option value="">Multiple room</option>
+            </select>
+          </div>
+		</div>
+	</div>
 </div>
 <div class="container"> 
 <div class="col-md-12 detail-box">
