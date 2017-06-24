@@ -8,12 +8,15 @@
  * that something that fits your app as well.
  */
 export class Item {
-
-  constructor(private fields: any) {
-    // Quick and dirty extend/assign fields to this model
-    for (let f in fields) {
-      this[f] = fields[f];
-    }
+  name: any;
+  rating: any;
+  profilePic: any;
+  about: any;
+  constructor(name: any, rating: any, profilePic: any, about: any) {
+    this.name = name;
+	this.rating = rating;
+	this.profilePic = profilePic;
+	this.about = about;
   }
 
 }

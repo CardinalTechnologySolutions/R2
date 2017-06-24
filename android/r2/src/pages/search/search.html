@@ -12,14 +12,17 @@
 <ion-content>
 <div class="container search-position">
    <h2 class="deal-text text-js">Find your ideal hotel for the best price</h2>
-  <ion-searchbar (ionInput)="getItems($event)" placeholder="{{ '' | translate }}"></ion-searchbar>
+   <ion-searchbar [(ngModel)]="searchTerm" [formControl]="searchControl" (ionInput)="onSearchInput()"></ion-searchbar>
+  <div *ngIf="searching" class="spinner-container">
+        <ion-spinner></ion-spinner>
+   </div>
   <ion-list>
     <button ion-item (click)="openItem(item)" *ngFor="let item of currentItems">
       <ion-avatar item-start>
         <img [src]="item.profilePic" />
       </ion-avatar>
-      <h2>New York City</h2>
-      <p>Best City in New York</p>
+      <h2>{{item.name}}</h2>
+      <p>{{item.about}}</p>
       <ion-note item-end *ngIf="item.note">{{item.note}}</ion-note>
     </button>
   </ion-list>

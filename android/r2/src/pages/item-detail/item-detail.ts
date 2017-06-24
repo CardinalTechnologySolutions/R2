@@ -9,6 +9,7 @@ import { Items } from '../../providers/providers';
 })
 export class ItemDetailPage {
   item: any;
+  searchResultCount: any = 0;
 
   constructor(public navCtrl: NavController, navParams: NavParams, items: Items) {
     this.item = navParams.get('item') || items.defaultItem;
