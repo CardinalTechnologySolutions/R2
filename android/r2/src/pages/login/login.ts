@@ -16,13 +16,22 @@ export class LoginPage {
   // The account fields for the login form.
   // If you're using the username field with or without email, make
   // sure to add it to the type
-  account: { username: string, password: string, clientId:string, clientSecret:string, grantType:string } = {
-    username: 'admin`manual',
-    password: 'admin',
-	clientId: 'ctswebscrapingservices',
-	clientSecret: 'ctswebscrapingservices',
-	grantType: 'password'
-  };
+  private clientId:string = "ctswebscrapingservices";
+  private clientSecret:string = "ctswebscrapingservices";
+  private grantType:string = "password";
+	account: { 
+		username: string, 
+		password: string, 
+		clientId:string, 
+		clientSecret:string, 
+		grantType:string
+	} = {
+		username: 'admin`manual',
+		password: 'admin',
+		clientId: this.clientId,
+		clientSecret: this.clientSecret,
+		grantType: this.grantType
+	};
 
   // Our translated text strings
   private loginErrorString: string;
