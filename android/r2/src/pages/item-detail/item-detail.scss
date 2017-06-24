@@ -1,6 +1,6 @@
 page-item-detail {
   .result-container h4{
-	margin: 15px 0;
+	margin: 0;
   }
   .item-profile {
     width: 100%;
@@ -31,13 +31,16 @@ page-item-detail {
     padding: 10px 30px 10px 30px;
   }
   .control-label{
-   color:#666;
+    color: #666;
   }
   .input-group ul{
    padding-left:0;  
   }
   .meta-search{
-   padding:0;
+    float: left;
+    width: 100%;
+    margin: 2px 0 0px 0;
+	padding: 0;
   }
   .meta-search li{
    list-style:none; 
@@ -78,7 +81,7 @@ h3{
 h3::before {
     position: absolute;
     content: "";
-    width: 20%;
+    width: 5%;
     height: 3px;
     border-radius: 5px;
     background: #488AFF;
@@ -99,13 +102,58 @@ h3::before {
 col-md-offset-1{
    padding:0;
 }
+.hotel-address {
+    float: left;
+    width: 100%;
+    margin-bottom: 8px;
+}
+.custom-margin {
+    margin-bottom:8px;
+}
+.result-container p {
+    margin-bottom: 2px;
+}
+.rating {
+    unicode-bidi: bidi-override;
+    direction: rtl;
+    text-align: left;
+}
+.rating > a {
+    display: inline-block;
+    position: relative;
+    width: 1.1em;
+	font-size: 23px;
+	text-decoration: none !important;
+    outline: none;
+	color: #929191;
+}
+.rating > a:hover, .rating > a:hover ~ a {
+    color: transparent;
+
+}
+.rating > a:hover:before,
+.rating > a:hover ~ a:before,
+.rating > a:focus:before,
+.rating > a:focus ~ a:before {
+    content: "\2605";
+    position: absolute;
+    left: 0;
+    color: gold;
+}
+
+
 
 @media (max-width:767px) {
 .result-filter {
     margin-right: 0 !important;
     margin-bottom: 15px;
 }
-
+.mobile-padding {
+    padding: 15px;
+}
+h3::before {
+    width: 20%;
+}
 }
 
 }
