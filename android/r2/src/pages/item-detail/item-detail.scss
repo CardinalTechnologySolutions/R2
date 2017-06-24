@@ -1,5 +1,7 @@
 page-item-detail {
-  .result-container h4{margin:0;}
+  .result-container h4{
+	margin: 15px 0;
+  }
   .item-profile {
     width: 100%;
     background-position: center center;
@@ -76,7 +78,7 @@ h3{
 h3::before {
     position: absolute;
     content: "";
-    width: 5%;
+    width: 20%;
     height: 3px;
     border-radius: 5px;
     background: #488AFF;

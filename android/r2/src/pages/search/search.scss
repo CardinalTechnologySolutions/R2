@@ -7,7 +7,7 @@ page-search {
    Color:#666;
    }
    h3{
-   padding: 0px;
+   padding: 0px 15px;
    position:relative;
    margin-bottom:25px;
    }
@@ -20,7 +20,7 @@ page-search {
    }
 
 .searchbar-input-container {
-    padding: 28px 0 0 0;
+    padding: 28px 15px 0 15px;
 }
 
 .searchbar-md .searchbar-search-icon, .searchbar-md .searchbar-md-cancel {
@@ -69,10 +69,12 @@ input.searchbar-input {
 }
 .searchbar-md .searchbar-search-icon {
     top: 41px;
+	left: 30px;
 }
 .searchbar-md .searchbar-clear-icon {
     top: 37px;
 	height: 25px;
+    right: 30px;
 }
 .button-clear-md:hover:not(.disable-hover) {
     background-color: transparent;
@@ -80,6 +82,7 @@ input.searchbar-input {
 h2.deal-text {
     color: #488aff;
     text-transform: uppercase;
+    padding: 0 15px;
 }
 
 .text-js{
@@ -108,7 +111,7 @@ h2.deal-text {
 ion-list.list.list-md {
     position: relative;
     top: 2px;
-	padding: 0 1px;
+    padding: 0 16px;
 }
 .searchbar-md {
     padding: 0px;
@@ -153,6 +156,15 @@ h3::before {
 .list.list-md {
     top: -14px !important;
     padding: 0 16px !important;
+}
+.searchbar-input-container {
+    padding: 28px 0px 0 0px;
+}
+.searchbar-md .searchbar-search-icon {
+    left: 20px;
+}
+.searchbar-md .searchbar-clear-icon {
+    right: 20px;
 }
 }
 
