@@ -51,14 +51,14 @@
               </div>
             </div>
             <div class="form-group">
-              <label for="priceto" class="control-label">Rating Star</label>
-              <select class="form-control" name="" id="type1">
-                <option value="">1 Star</option>
-                <option value="">2 Star</option>
-                <option value="">3 Star</option>
-                <option value="">4 Star</option>
-                <option value="">5 Star</option>
-              </select>
+				<label for="priceto" class="control-label">Rating Star</label>
+			  <ion-select [(ngModel)]="rating.val" name="rating" class="form-control" (ngModelChange)="getSearchResult();">
+				<ion-option value="1">1 Star</ion-option>
+				<ion-option value="2">2 Star</ion-option>
+				<ion-option value="3">3 Star</ion-option>
+				<ion-option value="4">4 Star</ion-option>
+				<ion-option value="5">5 Star</ion-option>
+				</ion-select>
             </div>
           </form>
           <div class="price-range">
@@ -72,60 +72,27 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-9 padding0">
-        <div class="result-container">
-          <div class="col-sm-3">
-            <a href="#">
-            <img class="img-responsive" src="assets/img/restaurant/4.jpg" alt=""> 
-            </a>
-          </div>
-          <div class="col-md-3 padding0 mobile-padding">
-            <h4><a href="#">Hotel Pennsylvania</a></h4>
-            <ul class="meta-search">
-              <li>
-                <div class="rating">
-                  <a href="#">☆</a><a href="#">☆</a><a href="#">☆</a><a href="#">☆</a><a href="#">☆</a>
-                </div>
-              </li>
-            </ul>
-            <div class="hotel-address"><a href="#">New York, 0.4 km to Empire State Building (City centre)</a></div>
-            <div class="review-count"><a href="#">80/100(655 review)</a></div>
-          </div>
-          <div  class="col-md-6">
-            <!-- <h3><font color="red"><a href="#" title="" target="_blank"></a></font></h3> -->
-            <div class="col-md-4 padding0 col-md-offset-1">
-              <p>Yelp</p>
-              <div class="custom-margin">	<img src="assets/img/rating/0.5.png" height="23" width="90" title="" /></div>
-            </div>
-            <div class="col-md-4 padding0 col-md-offset-1">
-              <p>Google Reviews</p>
-              <div class="custom-margin">	<img src="assets/img/rating/0.5.png" height="23" width="90" title="" /></div>
-            </div>
-            <div class="col-md-4 padding0 col-md-offset-1">
-              <p>Trip Advisor</p>
-              <div class="custom-margin">	<img src="assets/img/rating/0.5.png" height="23" width="90" title=""  /></div>
-            </div>
-            <div class="col-md-4 padding0 col-md-offset-1">
-              <p>Four Square</p>
-              <div class="custom-margin"><img src="assets/img/rating/0.5.png" height="23" width="90" title="" /></div>
-            </div>
-          </div>
-        </div>
-		</div>
 		
 		<div class="col-sm-9 padding0">
-		 <div class="result-container">
+		<div class="result-container">
+          <div  class="col-md-6">
+				No result found.
+          </div>
+        </div>	
+		<div class="result-container" *ngFor="let item of resultItems">
           <div class="col-sm-3">
             <a href="#">
             <img class="img-responsive" src="assets/img/restaurant/4.jpg" alt=""> 
             </a>
           </div>
           <div class="col-md-3 padding0 mobile-padding">
-            <h4><a href="#">Hotel Pennsylvania</a></h4>
+            <h4><a href="#">{{item.name}}</a></h4>
             <ul class="meta-search">
               <li>
                 <div class="rating">
-                  <a href="#">☆</a><a href="#">☆</a><a href="#">☆</a><a href="#">☆</a><a href="#">☆</a>
+                  <a href="#">
+					<img class="img-responsive" src="assets/img/rating/{{item.tripRatingStar}}" alt="">            
+				  </a>
                 </div>
               </li>
             </ul>
@@ -144,129 +111,17 @@
             </div>
             <div class="col-md-4 padding0 col-md-offset-1">
               <p>Trip Advisor</p>
-              <div class="custom-margin">	<img src="assets/img/rating/0.5.png" height="23" width="90" title=""  /></div>
+              <div class="custom-margin">	
+				<img class="img-responsive" src="assets/img/rating/{{item.tripRatingStar}}" alt="" height="23" width="90">  
+			</div>
             </div>
             <div class="col-md-4 padding0 col-md-offset-1">
               <p>Four Square</p>
               <div class="custom-margin"><img src="assets/img/rating/0.5.png" height="23" width="90" title="" /></div>
             </div>
           </div>
-        </div>
-		 <div class="result-container">
-          <div class="col-sm-3">
-            <a href="#">
-            <img class="img-responsive" src="assets/img/restaurant/4.jpg" alt=""> 
-            </a>
-          </div>
-          <div class="col-md-3 padding0 mobile-padding">
-            <h4><a href="#">Hotel Pennsylvania</a></h4>
-            <ul class="meta-search">
-              <li>
-                <div class="rating">
-                  <a href="#">☆</a><a href="#">☆</a><a href="#">☆</a><a href="#">☆</a><a href="#">☆</a>
-                </div>
-              </li>
-            </ul>
-            <div class="hotel-address"><a href="#">New York, 0.4 km to Empire State Building (City centre)</a></div>
-            <div class="review-count"><a href="#">80/100(655 review)</a></div>
-          </div>
-          <div  class="col-md-6">
-            <!-- <h3><font color="red"><a href="#" title="" target="_blank"></a></font></h3> -->
-            <div class="col-md-4 padding0 col-md-offset-1">
-              <p>Yelp</p>
-              <div class="custom-margin">	<img src="assets/img/rating/0.5.png" height="23" width="90" title="" /></div>
-            </div>
-            <div class="col-md-4 padding0 col-md-offset-1">
-              <p>Google Reviews</p>
-              <div class="custom-margin">	<img src="assets/img/rating/0.5.png" height="23" width="90" title="" /></div>
-            </div>
-            <div class="col-md-4 padding0 col-md-offset-1">
-              <p>Trip Advisor</p>
-              <div class="custom-margin">	<img src="assets/img/rating/0.5.png" height="23" width="90" title=""  /></div>
-            </div>
-            <div class="col-md-4 padding0 col-md-offset-1">
-              <p>Four Square</p>
-              <div class="custom-margin"><img src="assets/img/rating/0.5.png" height="23" width="90" title="" /></div>
-            </div>
-          </div>
-        </div>
-		 <div class="result-container">
-          <div class="col-sm-3">
-            <a href="#">
-            <img class="img-responsive" src="assets/img/restaurant/4.jpg" alt=""> 
-            </a>
-          </div>
-          <div class="col-md-3 padding0 mobile-padding">
-            <h4><a href="#">Hotel Pennsylvania</a></h4>
-            <ul class="meta-search">
-              <li>
-                <div class="rating">
-                  <a href="#">☆</a><a href="#">☆</a><a href="#">☆</a><a href="#">☆</a><a href="#">☆</a>
-                </div>
-              </li>
-            </ul>
-            <div class="hotel-address"><a href="#">New York, 0.4 km to Empire State Building (City centre)</a></div>
-            <div class="review-count"><a href="#">80/100(655 review)</a></div>
-          </div>
-          <div  class="col-md-6">
-            <!-- <h3><font color="red"><a href="#" title="" target="_blank"></a></font></h3> -->
-            <div class="col-md-4 padding0 col-md-offset-1">
-              <p>Yelp</p>
-              <div class="custom-margin">	<img src="assets/img/rating/0.5.png" height="23" width="90" title="" /></div>
-            </div>
-            <div class="col-md-4 padding0 col-md-offset-1">
-              <p>Google Reviews</p>
-              <div class="custom-margin">	<img src="assets/img/rating/0.5.png" height="23" width="90" title="" /></div>
-            </div>
-            <div class="col-md-4 padding0 col-md-offset-1">
-              <p>Trip Advisor</p>
-              <div class="custom-margin">	<img src="assets/img/rating/0.5.png" height="23" width="90" title=""  /></div>
-            </div>
-            <div class="col-md-4 padding0 col-md-offset-1">
-              <p>Four Square</p>
-              <div class="custom-margin"><img src="assets/img/rating/0.5.png" height="23" width="90" title="" /></div>
-            </div>
-          </div>
-        </div>
-		 <div class="result-container">
-          <div class="col-sm-3">
-            <a href="#">
-            <img class="img-responsive" src="assets/img/restaurant/4.jpg" alt=""> 
-            </a>
-          </div>
-          <div class="col-md-3 padding0 mobile-padding">
-            <h4><a href="#">Hotel Pennsylvania</a></h4>
-            <ul class="meta-search">
-              <li>
-                <div class="rating">
-                  <a href="#">☆</a><a href="#">☆</a><a href="#">☆</a><a href="#">☆</a><a href="#">☆</a>
-                </div>
-              </li>
-            </ul>
-            <div class="hotel-address"><a href="#">New York, 0.4 km to Empire State Building (City centre)</a></div>
-            <div class="review-count"><a href="#">80/100(655 review)</a></div>
-          </div>
-          <div  class="col-md-6">
-            <!-- <h3><font color="red"><a href="#" title="" target="_blank"></a></font></h3> -->
-            <div class="col-md-4 padding0 col-md-offset-1">
-              <p>Yelp</p>
-              <div class="custom-margin">	<img src="assets/img/rating/0.5.png" height="23" width="90" title="" /></div>
-            </div>
-            <div class="col-md-4 padding0 col-md-offset-1">
-              <p>Google Reviews</p>
-              <div class="custom-margin">	<img src="assets/img/rating/0.5.png" height="23" width="90" title="" /></div>
-            </div>
-            <div class="col-md-4 padding0 col-md-offset-1">
-              <p>Trip Advisor</p>
-              <div class="custom-margin">	<img src="assets/img/rating/0.5.png" height="23" width="90" title=""  /></div>
-            </div>
-            <div class="col-md-4 padding0 col-md-offset-1">
-              <p>Four Square</p>
-              <div class="custom-margin"><img src="assets/img/rating/0.5.png" height="23" width="90" title="" /></div>
-            </div>
-          </div>
-        </div>
-		</div>
+        </div>		
+	</div>
 		
 </div>
 </div>     
