@@ -2,6 +2,13 @@ page-item-detail {
   .result-container h4{
 	margin: 0;
   }
+  .result-container h4 a{
+	color:#333;
+  }
+   .result-container h4 a:hover{
+	color:#666;
+	text-decoration:none;
+  }
   .item-profile {
     width: 100%;
     background-position: center center;
@@ -106,6 +113,20 @@ col-md-offset-1{
     float: left;
     width: 100%;
     margin-bottom: 8px;
+}
+.hotel-address a {
+    color:#333;
+}
+.hotel-address a:hover {
+    color:#666;
+	text-decoration:none;
+}
+.review-count a{
+    color:#333;
+}
+.review-count a:hover{
+    color:#333; 
+	text-decoration:none;
 }
 .custom-margin {
     margin-bottom:8px;
