@@ -12,7 +12,7 @@ export class ItemDetailPage {
   item: any;
   searchResultCount: any = 0;
   searchDone: any = false;
-  rating = {val:""};
+  rating = {val:"4"};
   resultItems: any = [];
   test: any = [];
   noResultFound: any = false;
@@ -25,7 +25,7 @@ export class ItemDetailPage {
 		limit:any
 	} = {
 		rating:this.rating.val,
-		limit:10
+		limit:20
 	};
 
   constructor(public navCtrl: NavController, navParams: NavParams, items: Items, public restaurant: Restaurant, public toastCtrl: ToastController) {
@@ -36,7 +36,7 @@ export class ItemDetailPage {
   }
   getSearchResult(){	
 	alert(this.searchDTO.rating);
-	this.searchDone = true;
+	this.searchDone = false;
 	var me = this;
 	me.resultItems = [];
 	me.noResultFound = false;
