@@ -36,7 +36,7 @@ export class ItemDetailPage {
   }
   getSearchResult(){	
 	alert(this.searchDTO.rating);
-	this.searchDone = false;
+	this.searchDone = true;
 	var me = this;
 	me.resultItems = [];
 	me.noResultFound = false;
