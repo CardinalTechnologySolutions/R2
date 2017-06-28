@@ -36,12 +36,12 @@ export class Restaurant {
   search(searchDTO: any) {
 		 let headers = new Headers();
 	    headers.append('Content-Type', 'application/json');
-		if(!searchDTO.rating || searchDTO.rating === ""){
-			searchDTO.rating = "4";
+		if(!searchDTO.range || searchDTO.range === ""){
+			searchDTO.range = "4";
 		}
 		
 	    let data = {
-	    	rating: searchDTO.rating
+	    	range: searchDTO.range
 	    };
 		return this.api.get('searchRestaurant', data);
 		/*return this.http.get('https://www.reddit.com/r/worldnews/.json').map(res => res.json());

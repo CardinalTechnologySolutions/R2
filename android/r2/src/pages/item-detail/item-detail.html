@@ -55,41 +55,23 @@
               </div>
             </div>
 			 <div class="form-group">
-              <label for="pricefrom" class="control-label">Review Score</label>	
-				<ion-list radio-group [(ngModel)]="rating.val" name="rating">
-				  <ion-item>
-					<ion-label>Average</ion-label>
-					<ion-radio value="1" checked></ion-radio>
-				  </ion-item>
-				  <ion-item>
-					<ion-label>Good</ion-label>
-					<ion-radio value="2"></ion-radio>
-				  </ion-item>
-				  <ion-item>
-					<ion-label>Very Good</ion-label>
-					<ion-radio value="3" [disabled]="isDisabled"></ion-radio>
-				  </ion-item>
-				  <ion-item>
-					<ion-label>Excellent</ion-label>
-					<ion-radio value="4" [disabled]="isDisabled"></ion-radio>
-				  </ion-item>
-				</ion-list>
+              <label for="pricefrom" class="control-label">Review Score</label>
 				<ul class="review-btn-group">
 					<li>
 					<h6>Average</h6>
-					<button type="button" class="btn average-btn">55+</button>
+					<button ion-button class="btn average-btn" (click)="getSearchResult(1)">55+</button>
 					</li>
 					<li>
 					<h6>Good</h6>
-					<button type="button" class="btn good-btn">65+</button>
+					<button ion-button class="btn good-btn" (click)="getSearchResult(2)">65+</button>
 					</li>
 					<li>
 					<h6>Very Good</h6>
-					<button type="button" class="btn V-good-btn">75+</button>
+					<button ion-button class="btn V-good-btn" (click)="getSearchResult(3)">75+</button>
 					</li>
 					<li>
 					<h6>Excellent</h6>
-					<button type="button" class="btn excellent-btn">85+</button>
+					<button ion-button class="btn excellent-btn" (click)="getSearchResult(4)">85+</button>
 					</li>
 				</ul>
 			</div>
@@ -108,7 +90,8 @@
 	  </div>
 		
 		<div class="col-sm-9 padding0">
-		<div [hidden] = "noResultFound">
+		{{noResultFound}}
+		<div [hidden] = "resultFound">
 			No result found
 		</div>
 		<div class="result-container" *ngFor="let item of resultItems">

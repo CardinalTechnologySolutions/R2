@@ -12,19 +12,19 @@ export class ItemDetailPage {
   item: any;
   searchResultCount: any = 0;
   searchDone: any = false;
-  rating = {val:"4"};
+  range = {val:"4"};
   resultItems: any = [];
   test: any = [];
-  noResultFound: any = false;
+  resultFound: any = true;
   
   /*private clientId:string = "ctswebscrapingservices";
   private clientSecret:string = "ctswebscrapingservices";
   private grantType:string = "password";*/
 	searchDTO: { 
-		rating:string
+		range:string
 		limit:any
 	} = {
-		rating:this.rating.val,
+		range:this.range.val,
 		limit:20
 	};
 
@@ -32,27 +32,27 @@ export class ItemDetailPage {
     this.item = navParams.get('item') || items.defaultItem;
   }
   ionViewDidLoad() {
-		this.getSearchResult();
+		this.getSearchResult(4);
   }
-  getSearchResult(){	
-	alert(this.searchDTO.rating);
+  getSearchResult(val){	
+	this.searchDTO.range = val;
 	this.searchDone = false;
 	var me = this;
-	me.resultItems = [];
-	me.noResultFound = false;
+	this.resultItems = [];
+	me.resultFound = true;
 	this.restaurant.search(this.searchDTO).subscribe((resp) => {
 	  me.searchDone = true;
 	  var tmp = resp.json();
 	  if(tmp){
-			me.searchResultCount = tmp["restaurantSearchResult"].length;
+		  me.searchResultCount = tmp["restaurantSearchResult"].length;
 		  if(me.searchResultCount == 0){
-			me.noResultFound = true;
+			me.resultFound = false;
 		  }
 		  for(var i=0; i< tmp["restaurantSearchResult"].length;i++){
 			me.resultItems.push(tmp["restaurantSearchResult"][i]);
 		  }
 	  }else{
-		me.noResultFound = true;
+		me.resultFound = false;
 	  }
 	  
     }, (err) => {
