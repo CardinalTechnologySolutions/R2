@@ -15,7 +15,7 @@ export class ItemDetailPage {
   rating = {val:""};
   resultItems: any = [];
   test: any = [];
-  noResultsFound: any = true;
+  noResultFound: any = false;
   
   /*private clientId:string = "ctswebscrapingservices";
   private clientSecret:string = "ctswebscrapingservices";
@@ -32,24 +32,29 @@ export class ItemDetailPage {
     this.item = navParams.get('item') || items.defaultItem;
   }
   ionViewDidLoad() {
-		this.searchDTO.rating = "4";
 		this.getSearchResult();
   }
-  getSearchResult(){		
+  getSearchResult(){	
+	alert(this.searchDTO.rating);
 	this.searchDone = false;
 	var me = this;
 	me.resultItems = [];
-	me.noResultsFound = true;
+	me.noResultFound = false;
 	this.restaurant.search(this.searchDTO).subscribe((resp) => {
 	  me.searchDone = true;
 	  var tmp = resp.json();
-	  me.searchResultCount = tmp["restaurantSearchResult"].length;
-	  if(me.searchResultCount > 0){
-		me.noResultsFound = false;
+	  if(tmp){
+			me.searchResultCount = tmp["restaurantSearchResult"].length;
+		  if(me.searchResultCount == 0){
+			me.noResultFound = true;
+		  }
+		  for(var i=0; i< tmp["restaurantSearchResult"].length;i++){
+			me.resultItems.push(tmp["restaurantSearchResult"][i]);
+		  }
+	  }else{
+		me.noResultFound = true;
 	  }
-	  for(var i=0; i< tmp["restaurantSearchResult"].length;i++){
-		me.resultItems.push(tmp["restaurantSearchResult"][i]);
-	  }
+	  
     }, (err) => {
       // Unable to log in
       let toast = this.toastCtrl.create({
