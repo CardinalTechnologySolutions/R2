@@ -19,7 +19,7 @@ import { SettingsPage } from '../pages/settings/settings';
 import { SignupPage } from '../pages/signup/signup';
 import { TabsPage } from '../pages/tabs/tabs';
 import { TutorialPage } from '../pages/tutorial/tutorial';
-import { WelcomePage } from '../pages/welcome/welcome';
+//import { WelcomePage } from '../pages/welcome/welcome';
 
 import { Api } from '../providers/api';
 import { Items } from '../mocks/providers/items';
@@ -71,8 +71,7 @@ export function provideSettings(storage: Storage) {
     SettingsPage,
     SignupPage,
     TabsPage,
-    TutorialPage,
-    WelcomePage
+    TutorialPage
   ],
   imports: [
     BrowserModule,
@@ -102,8 +101,7 @@ export function provideSettings(storage: Storage) {
     SettingsPage,
     SignupPage,
     TabsPage,
-    TutorialPage,
-    WelcomePage
+    TutorialPage
   ],
   providers: [
     Api,

@@ -36,7 +36,7 @@ export class ItemDetailPage {
   }
   getSearchResult(val){	
 	this.searchDTO.range = val;
-	this.searchDone = true;
+	this.searchDone = false;
 	var me = this;
 	this.resultItems = [];
 	me.resultFound = true;
