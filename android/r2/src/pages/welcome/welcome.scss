@@ -5,21 +5,21 @@ page-welcome {
     to { background-position: 100% 0; }
   }
   .bx-position{
-    margin: auto;
+    margin: 100px 0 20px 0;
     position: relative;
-    top: 5%;
-    background: #fff;
-    box-shadow: 0px 0px 2px 0px #c3c3c3 !important;
-    border: solid 1px #ccc;
     padding: 30px !important;
-    opacity: 0.9;
 	}
 	
   .splash-info {
-    position: relative;
+    position: fixed;
     z-index: 2;
-    margin-top: 80px;
     text-align: center;
+    padding: 10px 0;
+    background-color: #fff;
+    -webkit-transform: translateZ(0);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.16), 0 2px 3px 0 rgba(0, 0, 0, 0.12);
+    width: 100%;
+    opacity: 0.9;
   }
   .scroll-content{
     position: relative;
@@ -27,23 +27,10 @@ page-welcome {
     height: 100%;
     z-index: 1;
     background-repeat: no-repeat;
-    animation: animatedBackground 20s linear infinite;
-    -ms-animation: animatedBackground 20s linear infinite;
-    -moz-animation: animatedBackground 20s linear infinite;
-    -webkit-animation: animatedBackground 20s linear infinite;
-	overflow-y: initial;
+    background-size: cover;
+    background-position: center center;
   }
 
-  .splash-logo {
-    margin: auto;
-    background: url('../assets/img/appicon.png') repeat transparent;
-    background-size: 100%;
-    width: 128px;
-    height: 128px;
-	background-color: #fff;
-    border-radius: 80% !important;
-	box-shadow: 0px 9px 9px -7px #9e999a;
-  }
   .splash-intro {
     font-size: 18px;
     font-weight: bold;
@@ -65,18 +52,134 @@ page-welcome {
       background-color: rgb(220, 220, 220);
     }
   }
+  a.logo img {
+  max-width:190px;
+}
+a.logo:hover {
+  opacity:1;
+}
+.web-nav{
+    padding: 10px 0 4px 0;
+}
+.web-nav ul {
+    list-style: none;
+    margin-top: 7px;
+    padding: 0;
+}
+.web-nav ul li{
+   display: inline;
+   padding:10px 10px;
+}
+.web-nav ul li a{
+   padding:10px 10px;
+   font-size:15px;
+   color:#333;
+   text-decoration:none;
+}
+.my-account{
+	padding: 10px 0;
+	font-size: 15px;
+	color: #000;
+	margin-top: 7px;
+}
+.my-account .fa-user-circle-o{
+    color: #2196f3;
+}
+.mobile-logo{
+   display:none;
+}
+.padding0 {
+  padding:0;
+}
+.login-with-social h4{
+  position:relative; 
+  text-align:center;
+     color: #fff;
+}
+.login-with-social h4:before{
+  content:"";
+  position: absolute;
+  left:0;
+  top: 13px;
+  width:30%;
+  height:1px;
+  background-color:#fff;  
+}
+.login-with-social h4:after{
+  content:"";
+  position: absolute;
+  right:0;
+  top: 13px;
+  width:30%;
+  height:1px;
+  background-color:#fff;   
+}
+.fb-circle  {
+    background: #3b5a9a;
+}
+.google-circle  {
+    background: #e14b3a;
+}
+.twitter-circle  {
+    background: #56adf2;
+}
+.login-with-social ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+.login-with-social ul li {
+    display: inline-block;
+    margin: 0 10px;
+    border-radius: 50%;
+    text-align: center;
+    padding: 10px;
+    color: #fff;
+    font-size: 22px;
+    width: 50px;
+    height: 50px;
+}
+.or-style {
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+}
+.custom-container {
+    max-width: 600px;
+}
+.logo-box {
+    margin: 20px auto 20px auto;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: solid 15px rgba(255,255,255,0.2);
+    background: rgba(255,255,255,0.2);
+}
 
 @media (max-width:767px) {
-  .scroll-content{
-    animation: animatedBackground 40s linear infinite;
-    -ms-animation: animatedBackground 40s linear infinite;
-    -moz-animation: animatedBackground 40s linear infinite;
-    -webkit-animation: animatedBackground 40s linear infinite;
-	 padding: 0 15px;
-  }
     .splash-info {
-    margin-top: 150px;
+    display:none;
   }
+  .mobile-logo{
+    display: block;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: #fff;
+    text-align: center;
+}
+  .logo-mb{
+    max-width: 74px;
+    margin: 40px 0 0 0;
+    padding: 0;
+  }
+  .bx-position{
+    top:0%;
+	}
+.scroll-content {
+    background: -webkit-linear-gradient(135deg, #bcd861, #16becf);
+    background: linear-gradient(135deg, #bcd861, #16becf);
+}
 }
  
 }

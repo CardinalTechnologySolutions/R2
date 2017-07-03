@@ -1,17 +1,67 @@
-<ion-header>
+<!-- <ion-header> -->
 
-  <ion-navbar>
-    <ion-title>{{ 'LOGIN_TITLE' | translate }}</ion-title>
-  </ion-navbar>
+  <!-- <ion-navbar> -->
+    <!-- <ion-title>{{ 'LOGIN_TITLE' | translate }}</ion-title> -->
+  <!-- </ion-navbar> -->
 
-</ion-header>
+<!-- </ion-header> -->
 
 
 <ion-content>
-<div class="bg-container">
-<div ion-col col-md-5 class="login-bx">
+<div class="splash-bg"></div>
+  <div class="splash-info">
+   <div class="container">
+    <div class="col-sm-12 padding0">
+	<div class="col-sm-3">
+	<a href="#" class="logo"><img src="assets/img/appicon.png"></a>
+	</div>
+		<div class="col-sm-6 web-nav">
+		   <ul>
+				  <li><a href="#">Home</a></li>
+				  <li><a href="#">About us</a></li>
+				  <li><a href="#">Services</a></li>
+				</ul>
+		</div>
+			<div class="col-sm-3 my-account">
+			   <i class="fa fa-user-circle-o" aria-hidden="true"></i> Account
+	        </div>
+	</div>
+	</div>
+
+  </div>
+   <div class="container custom-container">
+   <div class="logo-box">
+   <div class="col-sm-12 mobile-logo">
+	   <img src="assets/img/appicon-mobile.png" class="logo-mb" alt="mobile logo">
+	</div>
+	</div>
+	<div class="bg-container">
+	  <div class="col-sm-12 login-with-social">
+	   <h4>login with</h4>
+	   <ul>
+	   <li class="fb-circle"><i class="fa fa-facebook" aria-hidden="true"></i></li>
+	   <li class="google-circle"><i class="fa fa-google-plus" aria-hidden="true"></i></li>
+	   <li class="twitter-circle"><i class="fa fa-twitter" aria-hidden="true"></i></li>
+	   </ul>
+	   <div class="or-style">or</div>
+	</div>
+<div class="col-sm-12 login-bx">
   <form (submit)="doLogin()">
-    <ion-list>
+
+    <div class="col-sm-12">
+    <input class="custom-input" type="text" [(ngModel)]="account.username" placeholder="Username" name="uname" required>
+    <input class="custom-input" type="password" [(ngModel)]="account.password"  placeholder="Password" name="psw" required>
+
+    <button class="login-btn" type="submit">{{ 'LOGIN_BUTTON' | translate }}</button>
+   </div>
+
+  <div class="col-sm-12">
+    	<span class="psw pull-left f-password"><a href="#">Create a new account</a></span>
+  	<span class="psw pull-right f-password"> <a href="#">Forgot password?</a></span>
+
+  </div>
+</form>
+    <!-- <ion-list>
       <ion-item>
         <ion-label class="lable-login" fixed>{{ 'EMAIL' | translate }}</ion-label>
         <ion-input class="user-text-field" type="text" [(ngModel)]="account.username" name="username"></ion-input>
@@ -24,13 +74,16 @@
       <div padding>
         <button ion-button color="primary" block>{{ 'LOGIN_BUTTON' | translate }}</button>
       </div>
-    </ion-list>
-  </form>
+    </ion-list> -->
   </div>
-</div> 
+</div>
+
+	</div> 
 </ion-content>
-<ion-footer>
+
+
+<!-- <ion-footer>
   <ion-toolbar>
     <ion-title><div class="copy-r">Copyright 2017 Rating & Review | All rights reserved.</div></ion-title>
   </ion-toolbar>
-</ion-footer>
+</ion-footer> -->
