@@ -152,6 +152,24 @@ a.logo:hover {
 .fb-circle  {
     background: #3b5a9a;
 }
+.fb-circle a{
+    color: #fff;
+}
+.fb-circle a:hover{
+    color: #ccc;
+}
+.google-circle a{
+    color: #fff;
+}
+.google-circle a:hover{
+    color: #ccc;
+}
+.twitter-circle a{
+    color: #fff;
+}
+.twitter-circle a:hover{
+    color: #ccc;
+}
 .google-circle  {
     background: #e14b3a;
 }
@@ -176,16 +194,20 @@ a.logo:hover {
 }
 .or-style {
     color: #fff;
-    font-size: 22px;
+    font-size: 18px;
     text-align: center;
+    width: 30px;
+    height: 30px;
+    line-height: 42px;
+    margin: 25px auto 25px auto;
 }
 .custom-container {
     max-width: 600px;
 }
 .logo-box {
     margin: 20px auto 20px auto;
-    width: 180px;
-    height: 180px;
+    width: 160px;
+    height: 160px;
     border-radius: 50%;
     border: solid 15px rgba(255,255,255,0.2);
     background: rgba(255,255,255,0.2);
@@ -224,7 +246,7 @@ button.login-btn {
 }
 .f-password{
 	color:#fff;
-    margin: 6px 0;
+    margin: 10px 0;
 }
 
 .f-password a{
@@ -238,7 +260,15 @@ button.login-btn {
 .login-with-social {
     margin-top: 120px;
 }
-
+.or-style::before {
+    position: absolute;
+    content: "";
+    width: 30px;
+    height: 30px;
+    border: 2px solid #bfbebe;
+	-webkit-transform: rotate(50deg) translateY(10px);
+    transform: rotate(50deg) translateY(10px);
+}
 
 
 
@@ -258,38 +288,52 @@ button.login-btn {
     display: block;
   }
   .mobile-logo{
-    width: 150px;
-    height: 150px;
+    width: 130px;
+    height: 130px;
     border-radius: 50%;
     background: #fff;
     text-align: center;
 }
   .logo-mb{
-    max-width: 74px;
-    margin: 40px 0 0 0;
+    max-width: 60px;
+    margin: 36px 0 0 0;
     padding: 0;
   }
   .bx-position{
     top:0%;
 	}
 .scroll-content {
-    background: -webkit-linear-gradient(135deg, #bcd861, #16becf);
-    background: linear-gradient(135deg, #bcd861, #16becf);
+    background: -webkit-linear-gradient(135deg, #af29b1, #00b4e7);
+    background: linear-gradient(135deg, #af29b1, #00b4e7);
 }
 .login-bx {
     margin-top: 0;
 }
 .login-with-social {
     margin-top:0px;
+    padding: 0;
 }
 button.login-btn {
-    background: #910030;
+    background: #ffffff;
+    color: #000;
 }
 input.custom-input {
-    color: #910030;
+    color: #fff;
 }
 input.custom-input:focus {
- 	border: solid 1px #910030;
+ 	border: solid 1px #fff;
+}
+.f-password{
+    margin: 15px 0;
+}
+.bg-container {
+    padding: 0px;
+}
+.mobile-padding{
+    padding:0;
+}
+.or-style {
+    margin: 15px auto 20px auto;
 }
 }
 }
