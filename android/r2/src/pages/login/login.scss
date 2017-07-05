@@ -144,15 +144,7 @@ page-login {
     width: 50px;
     height: 50px;
 }
-.or-style {
-    color: #fff;
-    font-size: 18px;
-    text-align: center;
-    width: 30px;
-    height: 30px;
-    line-height: 42px;
-    margin: 25px auto 25px auto;
-}
+
 .custom-container {
     max-width: 600px;
 }
@@ -212,17 +204,30 @@ button.reset-btn {
 .login-with-social {
     margin-top: 120px;
 }
+.or-style {
+    width: 30px;
+    height: 30px;
+    margin: 25px auto 25px auto;
+    position: relative;
+}
 .or-style::before {
     position: absolute;
     content: "";
-    width: 30px;
-    height: 30px;
-    border: 2px solid #bfbebe;
-	-webkit-transform: rotate(50deg) translateY(10px);
+    width: 35px;
+    height: 35px;
+    background: #00b4e7;
+    -webkit-transform: rotate(50deg) translateY(10px);
     transform: rotate(50deg) translateY(10px);
+    border: 3px double #fff;
 }
-
-
+.or-style::after {
+    position: absolute;
+    content: "OR";
+    left: 2px;
+    font-size: 13px;
+    top: 15px;
+    color: #fff;
+}
 
 
 
