@@ -7,81 +7,45 @@
 <!-- </ion-header> -->
 <ion-content>
 <div class="splash-bg"></div>
-  <div class="splash-info">
-   <div class="container">
-    <div class="col-sm-12 padding0">
-	<div class="col-sm-3">
-	<a href="#" class="logo"><img src="assets/img/appicon.png"></a>
-	</div>
-		<div class="col-sm-6 web-nav">
-		   <ul>
-				  <li><a href="#">Home</a></li>
-				  <li><a href="#">About us</a></li>
-				  <li><a href="#">Services</a></li>
-				</ul>
+	<div class="container custom-container">
+	   <div class="logo-box">
+	   <div class="col-sm-12 mobile-logo">
+		   <img src="assets/img/appicon-mobile.png" class="logo-mb" alt="mobile logo">
 		</div>
-			<div class="col-sm-3 my-account">
-			   <i class="fa fa-user-circle-o" aria-hidden="true"></i> Account
-	        </div>
-	</div>
-	</div>
+		</div>
+		<div class="bg-container">
+			<div class="col-sm-12 login-with-social">
+			   <h4>login with</h4>
+			   <ul>
+			   <li class="fb-circle"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+			   <li class="google-circle"><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+			   <li class="twitter-circle"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+			   </ul>
+			   <div class="or-style">or</div>
+			</div>
+			<div class="col-sm-12 login-bx">
+				<form (submit)="doLogin()">
 
-  </div>
-   <div class="container custom-container">
-   <div class="logo-box">
-   <div class="col-sm-12 mobile-logo">
-	   <img src="assets/img/appicon-mobile.png" class="logo-mb" alt="mobile logo">
-	</div>
-	</div>
-	<div class="bg-container">
-	  <div class="col-sm-12 login-with-social">
-	   <h4>login with</h4>
-	   <ul>
-	   <li class="fb-circle"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-	   <li class="google-circle"><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-	   <li class="twitter-circle"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-	   </ul>
-	   <div class="or-style">or</div>
-	</div>
-<div class="col-sm-12 login-bx">
-  <form (submit)="doLogin()">
+					<div class="col-sm-12 mobile-padding">
+					  <input class="custom-input" type="text" [(ngModel)]="account.username" placeholder="Username" name="username" required>
+					  <input class="custom-input" type="password" [(ngModel)]="account.password"  placeholder="Password" name="password" required>
 
-    <div class="col-sm-12 mobile-padding">
-    <input class="custom-input" type="text" [(ngModel)]="account.username" placeholder="Username" name="username" required>
-    <input class="custom-input" type="password" [(ngModel)]="account.password"  placeholder="Password" name="password" required>
+					  <button class="login-btn" type="submit">{{ 'LOGIN_BUTTON' | translate }}</button>
+					  <button class="reset-btn" type="submit">Reset</button>
+				   </div>
 
-    <button class="login-btn" type="submit">{{ 'LOGIN_BUTTON' | translate }}</button>
-   </div>
+				   <div class="col-sm-12 mobile-padding">
+					   <span class="psw pull-left f-password"><a href="#" (click)="signup()">Create a new account</a></span>
+					   <span class="psw pull-right f-password"> <a href="#">Forgot password?</a></span>
 
-  <div class="col-sm-12 mobile-padding">
-    	<span class="psw pull-left f-password"><a href="#" (click)="signup()">Create a new account</a></span>
-  	<span class="psw pull-right f-password"> <a href="#">Forgot password?</a></span>
-
-  </div>
-</form>
-    <!-- <ion-list>
-      <ion-item>
-        <ion-label class="lable-login" fixed>{{ 'EMAIL' | translate }}</ion-label>
-        <ion-input class="user-text-field" type="text" [(ngModel)]="account.username" name="username"></ion-input>
-      </ion-item>
-
-      <ion-item>
-        <ion-label class="lable-login" fixed>{{ 'PASSWORD' | translate }}</ion-label>
-        <ion-input class="user-text-field" type="password" [(ngModel)]="account.password" name="password"></ion-input>
-      </ion-item>
-      <div padding>
-        <button ion-button color="primary" block>{{ 'LOGIN_BUTTON' | translate }}</button>
-      </div>
-    </ion-list> -->
-  </div>
-</div>
+				   </div>
+				</form>
+				
+			</div>
+		</div>
 
 	</div> 
 </ion-content>
 
 
-<!-- <ion-footer>
-  <ion-toolbar>
-    <ion-title><div class="copy-r">Copyright 2017 Rating & Review | All rights reserved.</div></ion-title>
-  </ion-toolbar>
-</ion-footer> -->
+

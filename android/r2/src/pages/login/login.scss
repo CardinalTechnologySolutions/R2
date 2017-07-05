@@ -170,35 +170,35 @@ input.custom-input {
     background: transparent;
     margin: 5px 0;
     border: solid 1px #fff;
-    color: #fff900;
+    color: #fff;
 }
 input.custom-input:focus {
-    border: solid 1px #fff900;
+    border: solid 1px #00b4e7;
 }
-.custom-input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-  color: #fff;
-}
-.custom-input::-moz-placeholder { /* Firefox 19+ */
-  color: #fff;
-}
-.custom-input:-ms-input-placeholder { /* IE 10+ */
-  color: #fff;
-}
-.custom-input:-moz-placeholder { /* Firefox 18- */
-  color: #fff;
-}
+
 button.login-btn {
-    width: 100%;
+    width: 47%;
     padding: 12px;
     background: #00b4e7;
     color: #fff;
     text-transform: uppercase;
     margin: 5px 0 0 0;
     text-align: center;
+	float:left;
+}
+button.reset-btn {
+    width: 47%;
+    padding: 12px;
+    background: #00b4e7;
+    color: #fff;
+    text-transform: uppercase;
+    margin: 5px 0 0 0;
+    text-align: center;
+	float:right;
 }
 .f-password{
 	color:#fff;
-    margin: 10px 0;
+    margin: 15px 0;
 }
 
 .f-password a{
@@ -258,6 +258,7 @@ button.login-btn {
     background: -webkit-linear-gradient(135deg, #af29b1, #00b4e7);
     background: linear-gradient(135deg, #af29b1, #00b4e7);
 }
+
 .login-bx {
     margin-top: 0;
 }
@@ -286,6 +287,10 @@ input.custom-input:focus {
 }
 .or-style {
     margin: 15px auto 20px auto;
+}
+button.reset-btn {
+	background: #ffffff;
+    color: #000;
 }
 }
 }

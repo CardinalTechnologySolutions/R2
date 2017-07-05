@@ -1,49 +1,33 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>{{ 'SIGNUP_TITLE' | translate }}</ion-title>
-  </ion-navbar>
-</ion-header>
+
 <ion-content>
-<div class="bg-container">
- <div ion-col col-md-5 class="signup-bx">
+
+<div class="splash-bg"></div>
+   <div class="container custom-container">
+   <div class="logo-box">
+   <div class="col-sm-12 mobile-logo">
+	   <img src="assets/img/appicon-mobile.png" class="logo-mb" alt="mobile logo">
+	</div>
+	</div>
+	<div class="bg-container">
+	  <div class="col-sm-12 login-with-social">
+	   <h4>Register Here</h4>
+	</div>
+<div class="col-sm-12 login-bx">
   <form (submit)="doSignup()">
-    <ion-list>
 
-      <ion-item>
-        <ion-label class="lable-signup" fixed>{{ 'NAME' | translate }}</ion-label>
-        <ion-input class="user-text-field" type="text" [(ngModel)]="account.name" name="name"></ion-input>
-      </ion-item>
+    <div class="col-sm-12 mobile-padding">
+    <input class="custom-input" type="text" [(ngModel)]="account.name" name="Name" required>
+	<input class="custom-input" type="email" [(ngModel)]="account.email" name="Email" required>
+    <input class="custom-input" type="password" [(ngModel)]="account.password" name="password" required>
+	 <input class="custom-input" type="password" [(ngModel)]="account.password" placeholder="Confirm Password" name="Confirm Password" required>
+	    <button class="register-btn" type="submit">{{ 'SIGNUP_BUTTON' | translate }}</button>
+		<button class="back-btn" type="submit">Back</button>
+   </div>
 
-      <ion-item>
-        <ion-label class="lable-signup" fixed>{{ 'EMAIL' | translate }}</ion-label>
-        <ion-input class="user-text-field" type="email" [(ngModel)]="account.email" name="email"></ion-input>
-      </ion-item>
+</form>
+    
+  </div>
+</div>
 
-      <!--
-      Want to add a Username? Here you go:
-
-      <ion-item>
-        <ion-label floating>Username</ion-label>
-        <ion-input type="text" [(ngModel)]="account.username" name="username"></ion-input>
-      </ion-item>
-      -->
-
-      <ion-item>
-        <ion-label class="lable-signup" fixed>{{ 'PASSWORD' | translate }}</ion-label>
-        <ion-input class="user-text-field" type="password" [(ngModel)]="account.password" name="password"></ion-input>
-      </ion-item>
-
-      <div padding>
-        <button ion-button color="primary" block>{{ 'SIGNUP_BUTTON' | translate }}</button>
-      </div>
-
-    </ion-list>
-  </form>
- </div> 
-</div>  
+	</div> 
 </ion-content>
-<ion-footer>
-  <ion-toolbar>
-    <ion-title><div class="copy-r">Copyright 2017 Rating & Review | All rights reserved.</div></ion-title>
-  </ion-toolbar>
-</ion-footer>

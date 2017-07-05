@@ -2,15 +2,7 @@ page-signup {
 .bg-container{ 
     padding: 0 15px;
    }
-   .signup-bx{
-      margin:auto;
-	  position:relative;
-	  margin-top:70px;
-	  background: #fff;
-      border: 1px solid #ccc;
-      padding: 70px;
-	  box-shadow: 0px 0px 7px 0px #ccc;
-   }
+
    .button-md{
     background-color: #464646;
     box-shadow: 0 0 5px 0 #dedede;
@@ -42,10 +34,162 @@ page-signup {
 .list-md div[padding] {
     padding: 16px 0 0 16px;
 }
+  .scroll-content{
+    position: relative;
+    background: url(../assets/img/bg-image.jpg) no-repeat transparent;
+    height: 100%;
+    z-index: 1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+.login-with-social h4{
+  position:relative; 
+  text-align:center;
+     color: #fff;
+}
+.login-with-social h4:before{
+  content:"";
+  position: absolute;
+  left:0;
+  top: 13px;
+  width:30%;
+  height:1px;
+  background-color:#fff;  
+}
+.login-with-social h4:after{
+  content:"";
+  position: absolute;
+  right:0;
+  top: 13px;
+  width:30%;
+  height:1px;
+  background-color:#fff;   
+}
+.custom-container {
+    max-width: 600px;
+}
+.logo-box {
+    margin: 20px auto 20px auto;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: solid 15px rgba(255,255,255,0.2);
+    background: rgba(255,255,255,0.2);
+}
+input.custom-input {
+    width: 100%;
+    padding: 8px;
+    background: transparent;
+    margin: 5px 0;
+    border: solid 1px #fff;
+    color: #fff;
+}
+input.custom-input:focus {
+    border: solid 1px #00b4e7;
+}
+button.register-btn {
+    width: 47%;
+    padding: 12px;
+    background: #00b4e7;
+    color: #fff;
+    text-transform: uppercase;
+    margin: 5px 0 0 0;
+    text-align: center;
+	float:left;
+}
+button.back-btn {
+    width: 47%;
+    padding: 12px;
+    background: #00b4e7;
+    color: #fff;
+    text-transform: uppercase;
+    margin: 5px 0 0 0;
+    text-align: center;
+	float:right;
+}
+.f-password{
+	color:#fff;
+    margin: 10px 0;
+}
+
+.f-password a{
+  color:#fff;
+}
+.f-password a:hover{
+  color:#ccc;
+  text-decoration:none;
+}
+.login-with-social {
+    margin-top: 120px;
+    margin-bottom: 30px;
+}
+.login-bx {
+    padding: 0;
+}
+
 @media (max-width:767px) {
-.signup-bx {
-    margin-top: 140px;
-    padding: 20px;
+.login-with-social {
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+.logo-box {
+    display: block;
+  }
+  .mobile-logo{
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background: #fff;
+    text-align: center;
+}
+  .logo-mb{
+    max-width: 60px;
+    margin: 36px 0 0 0;
+    padding: 0;
+  }
+  .bx-position{
+    top:0%;
+	}
+
+.login-bx {
+    margin-top: 0;
+	padding: 0;
+}
+.login-with-social {
+    margin-top:0px;
+    padding: 0;
+}
+button.login-btn {
+    background: #ffffff;
+    color: #000;
+}
+input.custom-input {
+    color: #fff;
+}
+input.custom-input:focus {
+ 	border: solid 1px #fff;
+}
+.f-password{
+    margin: 15px 0;
+}
+.bg-container {
+    padding: 0px;
+}
+.mobile-padding{
+    padding:0;
+}
+button.register-btn {
+    background: #ffffff;
+    color: #000;
+}
+button.back-btn {
+    background: #ffffff;
+    color: #000;
+}
+.scroll-content {
+    background: -webkit-linear-gradient(135deg, #af29b1, #00b4e7);
+    background: linear-gradient(135deg, #af29b1, #00b4e7);
 }
 }
 
