@@ -7,6 +7,8 @@ import { User } from '../../providers/user';
 
 import { TranslateService } from '@ngx-translate/core';
 
+import { SignupPage } from '../signup/signup';
+
 
 @Component({
   selector: 'page-login',
@@ -61,4 +63,8 @@ export class LoginPage {
       toast.present();
     });
   }
+   signup() {
+    this.navCtrl.push(SignupPage);
+  }
 }
+

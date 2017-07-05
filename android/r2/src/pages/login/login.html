@@ -47,8 +47,8 @@
   <form (submit)="doLogin()">
 
     <div class="col-sm-12 mobile-padding">
-    <input class="custom-input" type="text" [(ngModel)]="account.username" placeholder="Username" name="uname" required>
-    <input class="custom-input" type="password" [(ngModel)]="account.password"  placeholder="Password" name="psw" required>
+    <input class="custom-input" type="text" [(ngModel)]="account.username" placeholder="Username" name="username" required>
+    <input class="custom-input" type="password" [(ngModel)]="account.password"  placeholder="Password" name="password" required>
 
     <button class="login-btn" type="submit">{{ 'LOGIN_BUTTON' | translate }}</button>
    </div>
