@@ -16,8 +16,8 @@
   <form (submit)="doSignup()">
 
     <div class="col-sm-12 mobile-padding">
-    <input class="custom-input" type="text" [(ngModel)]="account.name" name="Name" required>
-	<input class="custom-input" type="email" [(ngModel)]="account.email" name="Email" required>
+    <input class="custom-input" type="text" [(ngModel)]="account.username" name="username" required>
+	<input class="custom-input" type="email" [(ngModel)]="account.email" name="email" required>
     <input class="custom-input" type="password" [(ngModel)]="account.password" name="password" required>
 	 <input class="custom-input" type="password" [(ngModel)]="account.password" placeholder="Confirm Password" name="Confirm Password" required>
 	    <button class="register-btn" type="submit">{{ 'SIGNUP_BUTTON' | translate }}</button>

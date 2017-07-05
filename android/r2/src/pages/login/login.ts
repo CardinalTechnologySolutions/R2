@@ -28,7 +28,7 @@ export class LoginPage {
 		clientSecret:string, 
 		grantType:string
 	} = {
-		username: 'admin`manual',
+		username: 'admin',
 		password: 'admin',
 		clientId: this.clientId,
 		clientSecret: this.clientSecret,

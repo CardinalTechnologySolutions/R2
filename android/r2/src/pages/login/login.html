@@ -25,11 +25,11 @@
 			</div>
 			<div class="col-sm-12 login-bx">
 				<form (submit)="doLogin()">
-
 					<div class="col-sm-12 mobile-padding">
-					  <input class="custom-input" type="text" [(ngModel)]="account.username" name="username" required>
-					  <input class="custom-input" type="password" [(ngModel)]="account.password" name="password" required>
+					  <input [(ngModel)]="account.username" name="username"  class="custom-input" type="text" />
+					  <input [(ngModel)]="account.password" name="password" class="custom-input" type="password"  />
 
+					  
 					  <button class="login-btn" type="submit">{{ 'LOGIN_BUTTON' | translate }}</button>
 					  <button class="reset-btn" type="submit">Reset</button>
 				   </div>
