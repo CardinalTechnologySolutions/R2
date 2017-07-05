@@ -41,6 +41,71 @@
     font-size: 12px;
     color: #ffffff;
 }
+.mobile-header {
+    display:none;
+}
+.splash-info {
+    position: fixed;
+    z-index: 2;
+    text-align: center;
+    padding: 10px 0;
+    background-color: #fff;
+    -webkit-transform: translateZ(0);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.16), 0 2px 3px 0 rgba(0, 0, 0, 0.12);
+    width: 100%;
+    opacity: 1;
+  }
+ a.logo img {
+  max-width:190px;
+}
+a.logo:hover {
+  opacity:1;
+}
+.web-nav{
+    padding: 10px 0 4px 0;
+}
+.web-nav ul {
+    list-style: none;
+    margin-top: 7px;
+    padding: 0;
+}
+.web-nav ul li{
+   display: inline;
+   padding:10px 10px;
+}
+.web-nav ul li a{
+   padding:10px 10px;
+   font-size:15px;
+   color:#333;
+   text-decoration:none;
+}
+.my-account{
+	padding: 10px 0;
+	font-size: 15px;
+	color: #000;
+	margin-top: 7px;
+}
+.my-account .fa-user-circle-o{
+    color: #2196f3;
+}
+.logo-box{
+   display:none;
+}
+.padding0 {
+  padding:0;
+}
+
+@media (max-width:767px) {
+.mobile-header{
+    display:block;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+.web-header {
+    display:none;
+}
+}
 
 [hidden] {
    display: none;
