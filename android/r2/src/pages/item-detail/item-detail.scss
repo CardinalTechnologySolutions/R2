@@ -149,15 +149,21 @@ ul.review-btn-group li {
     margin: 0px;
 }
 .review-btn-group h6 {
-    font-size: 12px;
-    margin: 6px 0;
+    font-size: 11px;
+    margin: 6px 3px 2px 3px;
     color: #444;
+    text-align: left;
 }
 .review-btn-group .btn {
-    padding: 3px 12px;
+    padding: 3px 14px;
     font-size: 13px;
     line-height: 15px;
 	outline:none;
+    box-shadow: inherit;
+}
+.btn-active {
+    border: solid 1px #959595;
+    box-shadow: 0 0 3px #d3d3d3;
 }
 
 .review-btn-group .btn:focus {
@@ -174,7 +180,7 @@ ul.review-btn-group li {
 }
 .V-good-btn, .V-good-btn:hover {
 	background:#80C31C !important;
-	padding: 3px 17px !important;
+	padding: 3px 16px !important;
 	color:#000;
 }
 .excellent-btn, .excellent-btn:hover {
@@ -192,9 +198,24 @@ ul.review-btn-group li {
 .mobile-padding {
     padding: 15px;
 }
+.review-btn-group .btn {
+    padding: 3px 17px;
+    font-size: 14px;
+    margin-left:6px;
+}
+.review-btn-group h6 {
+    font-size: 14px;
+    text-align: center;
+}
+
 h3::before {
     width: 20%;
 }
+.V-good-btn, .V-good-btn:hover {
+	padding: 3px 22px !important;
+}
+
+
 }
 
 }

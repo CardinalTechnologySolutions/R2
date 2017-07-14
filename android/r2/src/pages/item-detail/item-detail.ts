@@ -15,7 +15,7 @@ export class ItemDetailPage {
   range = {val:"4"};
   resultItems: any = [];
   test: any = [];
-  resultFound: any = true;
+  resultFound: any = false;
   
   /*private clientId:string = "ctswebscrapingservices";
   private clientSecret:string = "ctswebscrapingservices";
@@ -36,7 +36,7 @@ export class ItemDetailPage {
   }
   getSearchResult(val){	
 	this.searchDTO.range = val;
-	this.searchDone = false;
+	this.searchDone = true;
 	var me = this;
 	this.resultItems = [];
 	me.resultFound = true;
@@ -52,7 +52,7 @@ export class ItemDetailPage {
 			me.resultItems.push(tmp["restaurantSearchResult"][i]);
 		  }
 	  }else{
-		me.resultFound = false;
+		me.resultFound = true;
 	  }
 	  
     }, (err) => {
