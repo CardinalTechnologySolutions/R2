@@ -7,12 +7,12 @@
   <div class="item-profile" text-center #profilePic [style.background-image]="'url(' + item.profilePic + ')'">
   </div>
   <div class="container">
-  <div class="mobile-filter">
+  <div class="mobile-filter  stop-mobile">
   <ion-fab top right edge>
     <button ion-fab mini><ion-icon name="add"></ion-icon></button>
     <ion-fab-list>
      <div [hidden]="!searchDone">
-        <div class="col-md-3 padding0 stop-mobile">
+        <div class="col-md-3 padding0">
           <div class="result-filter">
             <form class="form-horizontal">
               <div class="form-group">
