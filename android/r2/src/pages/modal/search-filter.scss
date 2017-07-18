@@ -106,30 +106,21 @@ search-filter {
 		color: #000000 !important;
 		margin: 10px 6px 6px 6px;
 	}
-	
+	.filter-popup .form-group {
+		margin: 0;
+		padding: 12px;
+	}
+	.filter-popup {
+		padding: 5px;
+		margin-top: 57px;
+	}
+	.result-filter h4 {
+		margin: 15px 0;
+	}
 	@media (max-width:767px) {
 		.result-filter {
 			margin-right: 0 !important;
 			margin-bottom: 15px;
-		}
-		.mobile-padding {
-			padding: 15px;
-		}
-		.review-btn-group .btn {
-			padding: 3px 17px;
-			font-size: 14px;
-			margin-left:4px;
-		}
-		.review-btn-group h6 {
-			font-size: 14px;
-			text-align: center;
-		}
-
-		h3::before {
-			width: 20%;
-		}
-		.V-good-btn, .V-good-btn:hover {
-			padding: 3px 22px !important;
 		}
 	}
 }
