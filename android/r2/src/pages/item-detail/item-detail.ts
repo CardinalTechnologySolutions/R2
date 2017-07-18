@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams, ToastController} from 'ionic-angular';
+import { NavController, NavParams, ToastController, ModalController} from 'ionic-angular';
 
 import { Items } from '../../providers/providers';
 import { Restaurant } from '../../providers/providers';
+import { SearchFilter } from '../modal/search-filter';
 
 @Component({
   selector: 'page-item-detail',
@@ -29,7 +30,13 @@ export class ItemDetailPage {
 		limit:20
 	};
 
-  constructor(public navCtrl: NavController, navParams: NavParams, items: Items, public restaurant: Restaurant, public toastCtrl: ToastController) {
+  constructor(public navCtrl: NavController, 
+	navParams: NavParams, 
+	items: Items, 
+	public restaurant: Restaurant, 
+	public toastCtrl: ToastController,
+	public modalCtrl: ModalController
+	) {
     this.item = navParams.get('item') || items.defaultItem;
   }
   ionViewDidLoad() {
@@ -65,5 +72,9 @@ export class ItemDetailPage {
       });
       toast.present();
     });
+  }
+  showSearchFilter(){
+    var modalPage = this.modalCtrl.create(SearchFilter);
+    modalPage.present();
   }
 }
