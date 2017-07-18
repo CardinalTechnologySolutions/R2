@@ -112,7 +112,7 @@ search-filter {
 	}
 	.filter-popup {
 		padding: 5px;
-		margin-top: 57px;
+		margin-top: 95px;
 	}
 	.result-filter h4 {
 		margin: 15px 0;
@@ -121,6 +121,9 @@ search-filter {
 		.result-filter {
 			margin-right: 0 !important;
 			margin-bottom: 15px;
+			box-shadow: inherit;
+			border: 0;
+			border-radius: 4px;
 		}
 	}
 }
