@@ -6,11 +6,11 @@
 <ion-content>
   <div class="item-profile" text-center #profilePic [style.background-image]="'url(' + item.profilePic + ')'">
   </div>
-  <div class="container">  
- 
-  <div class="stop-mobile">
+    <div class="filter-btn-group">
 	  <button ion-button (click)="showSearchFilter()">Open Modal</button> 
   </div>
+  <div class="container">  
+ 
     <div class="col-md-12 detail-box">
       <h3>
         Search Results : 
@@ -24,7 +24,7 @@
         <ion-spinner></ion-spinner>
       </div>
       <div [hidden]="!searchDone">
-        <div class="col-md-3 padding0 stop-web">
+        <div class="col-md-3 padding0 result-filter-web">
           <div class="result-filter">
             <form class="form-horizontal">
               <div class="form-group">
