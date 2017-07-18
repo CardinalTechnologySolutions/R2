@@ -1,0 +1,60 @@
+ <div class="col-md-3 stop-web">
+  <div class="result-filter">
+	<form class="form-horizontal">
+	  <div class="form-group">
+		<h4>Result Filter</h4>
+		<label for="location1" class="control-label">Proximity(Miles)</label>
+		<select class="form-control" name="" id="location1">
+		  <option value="">Any</option>
+		  <option value="">2</option>
+		  <option value="">5</option>
+		  <option value="">8</option>
+		  <option value="">10</option>
+		  <option value="">15</option>
+		  <option value="">20</option>
+		</select>
+	  </div>
+	  <div class="form-group">
+		<label for="type1" class="control-label">Cuisine</label>
+		<select class="form-control" name="" id="type1">
+		  <option value="">Any</option>
+		  <option value="">Chinese</option>
+		  <option value="">Indian</option>
+		  <option value="">Italian</option>
+		  <option value="">American</option>
+		  <option value="">Spanish</option>
+		</select>
+	  </div>
+	  <div class="form-group">
+		<label for="pricefrom" class="control-label">Review Score</label>
+		<ul class="review-btn-group">
+		  <li>
+			<h6>Average</h6>
+			<button ion-button class="btn average-btn" [ngClass]="{ 'btn-active': review == 1 }" (click)="getSearchResult(1)">55+</button>
+		  </li>
+		  <li>
+			<h6>Good</h6>
+			<button ion-button class="btn good-btn" [ngClass]="{ 'btn-active': review == 2 }" (click)="getSearchResult(2)">65+</button>
+		  </li>
+		  <li>
+			<h6>Very Good</h6>
+			<button ion-button class="btn V-good-btn" [ngClass]="{ 'btn-active': review == 3 }" (click)="getSearchResult(3)">75+</button>
+		  </li>
+		  <li>
+			<h6>Excellent</h6>
+			<button ion-button class="btn excellent-btn" [ngClass]="{ 'btn-active': review == 4 }" (click)="getSearchResult(4)">85+</button>
+		  </li>
+		</ul>
+	  </div>
+	</form>
+	<div class="price-range">
+	  <h4>Price:</h4>
+	  <ion-item>
+		<ion-range min="-200" max="200" [(ngModel)]="saturation" color="secondary">
+		<ion-label range-left>-200</ion-label>
+		<ion-label range-right>200</ion-label>
+		</ion-range>
+	  </ion-item>
+	</div>
+  </div>
+</div>

@@ -1,0 +1,135 @@
+search-filter {
+	.result-filter{
+		background: #fff;
+		padding: 0;
+		margin-right: 15px;
+		border: solid 1px #b1b1b1;
+		box-shadow: 0px 0px 2px 0 #ccc;
+		border-radius: 1%;
+	}
+	.padding0 {
+		padding:0;
+	}
+	
+	h3{
+	   padding: 0px;
+	   position:relative;
+	   margin-bottom:25px;
+	}
+	h3::before {
+		position: absolute;
+		content: "";
+		width: 5%;
+		height: 3px;
+		border-radius: 5px;
+		background: #00b4e7;
+		bottom: -8px;
+	}
+	.price-range {
+		padding: 0 15px;
+	}
+	.price-range h4 {
+		margin: 0;
+	}
+	.price-range .item-md.item-range {
+		padding: 0;
+	}
+	.price-range .item-range ion-range {
+		padding: 0;
+	}
+	.item-md.item-block .item-inner {
+		border-bottom: 0;
+	}
+	
+	ul.review-btn-group {
+		padding: 0;
+		list-style-type: none;
+		margin-top: 8px;
+	}
+	ul.review-btn-group li {
+		display: inline-block;
+		margin: 0px;
+	}
+	.review-btn-group h6 {
+		font-size: 11px;
+		margin: 6px 3px 2px 3px;
+		color: #444;
+		text-align: left;
+	}
+	.review-btn-group .btn {
+		padding: 3px 14px;
+		font-size: 13px;
+		line-height: 15px;
+		outline:none;
+		box-shadow: inherit;
+		margin: 1px;
+	}
+	button.btn-active {
+		border: solid 1px #000000;
+		box-shadow: 0px 2px 5px #9c9c9c !important;
+	}
+
+	.review-btn-group .btn:focus {
+		outline:none;
+	}
+	.average-btn, .average-btn:hover {
+		background:#fdeb74 !important;
+		color:#000;
+	}
+	.good-btn, .good-btn:hover {
+		background:#ffa500 !important;
+		color:#000;
+
+	}
+	.V-good-btn, .V-good-btn:hover {
+		background:#80C31C !important;
+		padding: 3px 16px !important;
+		color:#000;
+	}
+	.excellent-btn, .excellent-btn:hover {
+		background:#20962f !important;
+		color:#000;
+	}
+	.result-box {
+		padding: 15px;
+		border: solid 1px #b1b1b1;
+		box-shadow: 0px 0px 2px 0 #ccc;
+		border-radius: 1%;
+		min-height: 408px;
+		margin-bottom: 20px;
+		background: #fff url(../assets/img/no-result.png) no-repeat;
+		background-position: center center;
+		background-size: 100%;
+	}
+	.result-box h2 {
+		font-size: 2rem !important;
+		color: #000000 !important;
+		margin: 10px 6px 6px 6px;
+	}
+	
+	@media (max-width:767px) {
+		.result-filter {
+			margin-right: 0 !important;
+			margin-bottom: 15px;
+		}
+		.mobile-padding {
+			padding: 15px;
+		}
+		.review-btn-group .btn {
+			padding: 3px 17px;
+			font-size: 14px;
+			margin-left:4px;
+		}
+		.review-btn-group h6 {
+			font-size: 14px;
+			text-align: center;
+		}
+
+		h3::before {
+			width: 20%;
+		}
+		.V-good-btn, .V-good-btn:hover {
+			padding: 3px 22px !important;
+		}
+	}
+}
