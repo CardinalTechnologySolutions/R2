@@ -204,27 +204,7 @@ button.btn-active {
     color: #000000 !important;
     margin: 10px 6px 6px 6px;
 }
-.stop-mobile {
-	display:none;
-}
-.mobile-filter {
-    position: relative;
-    width: 100%;
-    float: left;
-}
-.mobile-filter ion-fab {
-    width: 100%;
-    background: #ffffff;
-    top: 0 !important;
-    position: relative;
-    float: left;
-    border: solid 1px #d7d7d7;
-    margin: 10px;
-}
-.mobile-filter ion-fab-list.fab-list-active {
-    margin-top: 57px;
-    width: 100%;
-}
+
 .mobile-filter .result-filter {
     border: solid 1px #d7d7d7;
     box-shadow: inherit;
@@ -239,7 +219,14 @@ button.btn-active {
     border-radius: 0;
     color: #000;
 }
-
+.avg-rating{
+    max-width: 95px;
+    float: left;
+    margin-bottom: 6px;
+}
+.filter-btn-group {
+    display: none;
+}
 @media (max-width:767px) {
 .result-filter {
     margin-right: 0 !important;
@@ -268,12 +255,9 @@ h3::before {
 .result-filter-web {
 	display:none;
 }
-
+.filter-btn-group {
+    display: block;
+}
 }
 
-}
-.avg-rating{
-    max-width: 95px;
-    float: left;
-    margin-bottom: 6px;
 }
