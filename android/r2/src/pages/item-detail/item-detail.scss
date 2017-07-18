@@ -160,10 +160,11 @@ ul.review-btn-group li {
     line-height: 15px;
 	outline:none;
     box-shadow: inherit;
+    margin: 1px;
 }
-.btn-active {
-    border: solid 1px #959595;
-    box-shadow: 0 0 3px #d3d3d3;
+button.btn-active {
+    border: solid 1px #000000;
+    box-shadow: 0px 2px 5px #444 !important;
 }
 
 .review-btn-group .btn:focus {
@@ -187,7 +188,20 @@ ul.review-btn-group li {
 	background:#20962f !important;
 	color:#000;
 }
-
+.result-box {
+    background: #fff;
+    padding: 15px;
+    border: solid 1px #b1b1b1;
+    box-shadow: 0px 0px 2px 0 #ccc;
+    border-radius: 1%;
+    min-height: 408px;
+    margin-bottom: 20px;
+}
+.result-box h2 {
+    font-size: 2rem !important;
+    color: #000000 !important;
+    margin: 10px 6px 6px 6px;
+}
 
 
 @media (max-width:767px) {
@@ -201,7 +215,7 @@ ul.review-btn-group li {
 .review-btn-group .btn {
     padding: 3px 17px;
     font-size: 14px;
-    margin-left:6px;
+    margin-left:4px;
 }
 .review-btn-group h6 {
     font-size: 14px;

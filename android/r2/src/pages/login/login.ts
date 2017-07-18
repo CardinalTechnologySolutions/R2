@@ -15,6 +15,7 @@ import { SignupPage } from '../signup/signup';
   templateUrl: 'login.html'
 })
 export class LoginPage {
+  
   // The account fields for the login form.
   // If you're using the username field with or without email, make
   // sure to add it to the type

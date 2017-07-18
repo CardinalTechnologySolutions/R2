@@ -10,12 +10,13 @@ import { Restaurant } from '../../providers/providers';
 })
 export class ItemDetailPage {
   item: any;
+  review: any  = 4;
   searchResultCount: any = 0;
   searchDone: any = false;
   range = {val:"4"};
   resultItems: any = [];
   test: any = [];
-  resultFound: any = false;
+  resultFound: any = true;
   
   /*private clientId:string = "ctswebscrapingservices";
   private clientSecret:string = "ctswebscrapingservices";
@@ -35,26 +36,26 @@ export class ItemDetailPage {
 		this.getSearchResult(4);
   }
   getSearchResult(val){	
-	this.searchDTO.range = val;
-	this.searchDone = true;
 	var me = this;
-	this.resultItems = [];
 	me.resultFound = true;
+	this.review = val;
+	this.searchDTO.range = val;
+	this.searchDone = false;
+	me.searchResultCount = 0;
+	this.resultItems = [];
 	this.restaurant.search(this.searchDTO).subscribe((resp) => {
 	  me.searchDone = true;
 	  var tmp = resp.json();
 	  if(tmp){
-		  me.searchResultCount = tmp["restaurantSearchResult"].length;
-		  if(me.searchResultCount == 0){
-			me.resultFound = false;
-		  }
+		  me.searchResultCount = tmp["restaurantSearchResult"].length;		  
 		  for(var i=0; i< tmp["restaurantSearchResult"].length;i++){
 			me.resultItems.push(tmp["restaurantSearchResult"][i]);
 		  }
-	  }else{
-		me.resultFound = true;
 	  }
-	  
+	  if(me.searchResultCount == 0){
+		me.resultFound = false;
+	  }
+  
     }, (err) => {
       // Unable to log in
       let toast = this.toastCtrl.create({
