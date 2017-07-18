@@ -94,6 +94,10 @@ a.logo:hover {
 .padding0 {
   padding:0;
 }
+ion-modal ion-backdrop {
+    visibility: visible;
+    z-index: -1;
+}
 .my-account a{ color:#333;}
 .my-account a:hover{ text-decoration:none;}
 
