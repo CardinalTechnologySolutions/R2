@@ -13,7 +13,7 @@ export class ItemDetailPage {
   item: any;
   review: any  = 4;
   searchResultCount: any = 0;
-  searchDone: any = false;
+  searchDone: any = true;
   range = {val:"4"};
   resultItems: any = [];
   test: any = [];
@@ -48,7 +48,7 @@ export class ItemDetailPage {
 	me.resultFound = true;
 	this.review = val;
 	this.searchDTO.range = val;
-	this.searchDone = false;
+	this.searchDone = true;
 	me.searchResultCount = 0;
 	this.resultItems = [];
 	this.restaurant.search(this.searchDTO).subscribe((resp) => {

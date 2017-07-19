@@ -57,6 +57,8 @@
   }
  a.logo img {
   max-width:220px;
+  float:left;
+  margin-left: -7px;
 }
 a.logo:hover {
   opacity:1;
@@ -80,7 +82,7 @@ a.logo:hover {
    text-decoration:none;
 }
 .my-account{
-	padding: 10px 0;
+	padding: 10px 15px;
 	font-size: 15px;
 	color: #000;
 	margin-top: 7px;
