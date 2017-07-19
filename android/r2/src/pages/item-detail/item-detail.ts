@@ -30,7 +30,8 @@ export class ItemDetailPage {
 		limit:20
 	};
 
-  constructor(public navCtrl: NavController, 
+  constructor(
+	public navCtrl: NavController, 
 	navParams: NavParams, 
 	items: Items, 
 	public restaurant: Restaurant, 
@@ -75,6 +76,9 @@ export class ItemDetailPage {
   }
   showSearchFilter(){
     var modalPage = this.modalCtrl.create(SearchFilter);
+	modalPage.onDidDismiss(data => {
+	 this.getSearchResult(data);
+   });
     modalPage.present();
   }
 }
