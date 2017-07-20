@@ -63,6 +63,7 @@ export class ItemDetailPage{
     });
   }
   showSearchFilter(){
+	this.searchDone = false;
 	var modalPage = this.modalCtrl.create(SearchFilter, {review:this.searchDTO.range}, {
         showBackdrop: false,
         enableBackdropDismiss: false,

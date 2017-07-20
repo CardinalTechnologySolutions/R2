@@ -24,8 +24,7 @@ export class SearchFilter {
 		}
 	}
 	public dismiss(action){
-		let data = { 'review': this.review, 'action':action };
-		this.viewCtrl.dismiss(data);
+		this.viewCtrl.dismiss({ 'review': this.review, 'action':action });
 	}
 	ionViewDidLoad() {
 		console.log('ionViewDidLoad ModalPage');
