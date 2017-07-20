@@ -1,5 +1,5 @@
 import { Component} from '@angular/core';
-import { NavController, NavParams, ToastController, ModalController , Platform} from 'ionic-angular';
+import { NavController, NavParams, ToastController, ModalController} from 'ionic-angular';
 
 import { Items } from '../../providers/providers';
 import { Restaurant } from '../../providers/providers';
@@ -11,18 +11,10 @@ import { SearchFilter } from '../modal/search-filter';
   templateUrl: 'item-detail.html'
 })
 export class ItemDetailPage{
-  mobile: any = false;
   item: any;
-  searchResultCount: any = 0;
-  searchDone: any = true;
+  searchDone: any = false;
   range = {val:"4"};
   resultItems: any = [];
-  test: any = [];
-  resultFound: any = true;
-  
-  /*private clientId:string = "ctswebscrapingservices";
-  private clientSecret:string = "ctswebscrapingservices";
-  private grantType:string = "password";*/
 	searchDTO: { 
 		range:string
 		limit:any
@@ -36,39 +28,28 @@ export class ItemDetailPage{
 	items: Items, 
 	public restaurant: Restaurant, 
 	public toastCtrl: ToastController,
-	public modalCtrl: ModalController,
-	public platform: Platform
+	public modalCtrl: ModalController
 	) {
-		if(this.platform.is("mobile")){
-			this.mobile = true;
-		}
 		this.item = navParams.get('item') || items.defaultItem;	
   }
   ionViewDidLoad() {
 		this.getSearchResult(4);
   }
   triggerWebSearch(event){
-	console.log("event received" + event);
+	this.searchDone = false;
 	this.getSearchResult(event);
   }
   getSearchResult(val){	
 	var me = this;
-	me.resultFound = true;
-	this.searchDTO.range = val;
-	this.searchDone = true;
-	me.searchResultCount = 0;
-	this.resultItems = [];
+	me.searchDTO.range = val;	
+	me.resultItems = [];
 	this.restaurant.search(this.searchDTO).subscribe((resp) => {
 	  me.searchDone = true;
 	  var tmp = resp.json();
-	  if(tmp){
-		  me.searchResultCount = tmp["restaurantSearchResult"].length;		  
+	  if(tmp){		  
 		  for(var i=0; i< tmp["restaurantSearchResult"].length;i++){
 			me.resultItems.push(tmp["restaurantSearchResult"][i]);
 		  }
-	  }
-	  if(me.searchResultCount == 0){
-		me.resultFound = false;
 	  }
   
     }, (err) => {
@@ -82,10 +63,16 @@ export class ItemDetailPage{
     });
   }
   showSearchFilter(){
-    var modalPage = this.modalCtrl.create(SearchFilter);
+	var modalPage = this.modalCtrl.create(SearchFilter, {review:this.searchDTO.range}, {
+        showBackdrop: false,
+        enableBackdropDismiss: false,
+        enterAnimation: 'modal-scale-up-enter'
+    });
 	modalPage.onDidDismiss(data => {
-	 this.getSearchResult(data);
-   });
+		if(data.action === 'search'){
+			this.getSearchResult(data.review);
+		}	 
+	});
     modalPage.present();
   }
 }

@@ -16,8 +16,8 @@
         Search Results : 
         <span [hidden]="!searchDone">
           Total 
-          <ion-badge>({{searchResultCount}})</ion-badge>
-          matching item(s) found {{searchDone}}
+          <ion-badge>({{resultItems.length}})</ion-badge>
+          matching item(s) found
         </span>
       </h3>
       <div *ngIf="!searchDone" class="spinner-container">
@@ -29,8 +29,10 @@
         </div>
       </div>
       <div class="col-sm-9 padding0">
-        <div class="result-box" [hidden] = "resultFound">
-        </div>
+		<div [hidden] ="!searchDone">
+			<div class="result-box" [hidden] = "resultItems.length > 0"></div>
+		</div>
+        
         <div class="result-container" *ngFor="let item of resultItems">
           <div class="col-sm-3">
             <img class="img-responsive" src="assets/img/restaurant/4.jpg" alt=""> 

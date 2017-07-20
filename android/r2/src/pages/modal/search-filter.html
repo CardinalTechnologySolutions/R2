@@ -4,7 +4,7 @@
       Search Filter
     </ion-title>
     <ion-buttons start>
-      <button ion-button (click)="dismiss()">
+      <button ion-button (click)="dismiss('close')">
         <span ion-text color="primary" showWhen="ios">Cancel</span>
         <ion-icon name="md-close" showWhen="android, windows"></ion-icon>
       </button>
@@ -72,14 +72,14 @@
 </ion-content>
 
 
-<ion-header>
+<ion-header  *ngIf="!mobile">
   <ion-toolbar>
     <ion-title>
       Search Filter
     </ion-title>
   </ion-toolbar>
 </ion-header>
- <ion-card class="web-filter-card">
+ <ion-card class="web-filter-card"  *ngIf="!mobile">
   <ion-card-content>
     <div class="form-group">
 		<label for="location1" class="control-label">Proximity(Miles)</label>

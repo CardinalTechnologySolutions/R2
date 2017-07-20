@@ -1,6 +1,5 @@
 import { Component, EventEmitter, Output} from '@angular/core';
 import { NavController, NavParams, ViewController , Platform} from 'ionic-angular';
-import { ItemDetailPage } from '../item-detail/item-detail';
 
 @Component({
 selector: 'search-filter',
@@ -16,12 +15,17 @@ export class SearchFilter {
 		public navParams: NavParams, 
 		public platform: Platform
 	) {
+		this.review = navParams.get('review');
+		if(!this.review){
+			this.review = 4;
+		}
 		if(this.platform.is("mobile")){
 			this.mobile = true;
 		}
 	}
-	public dismiss(){
-		this.viewCtrl.dismiss(this.review);
+	public dismiss(action){
+		let data = { 'review': this.review, 'action':action };
+		this.viewCtrl.dismiss(data);
 	}
 	ionViewDidLoad() {
 		console.log('ionViewDidLoad ModalPage');
@@ -29,7 +33,7 @@ export class SearchFilter {
 	getSearchResult(val){
 		this.review = val;
 		if(this.mobile){
-			this.dismiss();
+			this.dismiss('search');
 		}else{
 			this.emitToParent.emit(this.review);
 		} 		

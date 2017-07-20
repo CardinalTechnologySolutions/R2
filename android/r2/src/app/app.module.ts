@@ -1,7 +1,7 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule, Http } from '@angular/http';
-import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
+import { IonicApp, IonicModule, IonicErrorHandler, Config } from 'ionic-angular';
 import { Storage, IonicStorageModule } from '@ionic/storage';
 
 import { MyApp } from './app.component';
@@ -19,7 +19,8 @@ import { SettingsPage } from '../pages/settings/settings';
 import { SignupPage } from '../pages/signup/signup';
 import { TabsPage } from '../pages/tabs/tabs';
 import { TutorialPage } from '../pages/tutorial/tutorial';
-//import { WelcomePage } from '../pages/welcome/welcome';
+import { ModalScaleUpLeaveTransition } from '../pages/modal/scale-up-leave.transition';
+import { ModalScaleUpEnterTransition } from '../pages/modal/scale-up-enter.transition';
 
 import { Api } from '../providers/api';
 import { Items } from '../mocks/providers/items';
@@ -120,4 +121,13 @@ export function provideSettings(storage: Storage) {
     { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })
-export class AppModule { }
+export class AppModule { 
+	constructor(public config: Config) {
+        this.setCustomTransitions();
+    }
+
+    private setCustomTransitions() {
+        /*this.config.setTransition('modal-scale-up-leave', ModalScaleUpLeaveTransition);*/
+        this.config.setTransition('modal-scale-up-enter', ModalScaleUpEnterTransition);
+    }
+}
