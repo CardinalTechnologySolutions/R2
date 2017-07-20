@@ -17,7 +17,7 @@
         <span [hidden]="!searchDone">
           Total 
           <ion-badge>({{searchResultCount}})</ion-badge>
-          matching item(s) found &nbsp;<ion-spinner></ion-spinner>
+          matching item(s) found {{searchDone}}
         </span>
       </h3>
       <div *ngIf="!searchDone" class="spinner-container">
