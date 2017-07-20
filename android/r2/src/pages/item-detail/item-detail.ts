@@ -51,7 +51,7 @@ export class ItemDetailPage{
 			me.resultItems.push(tmp["restaurantSearchResult"][i]);
 		  }
 	  }
-  
+        
     }, (err) => {
       // Unable to log in
       let toast = this.toastCtrl.create({
