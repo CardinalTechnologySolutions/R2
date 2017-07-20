@@ -17,7 +17,7 @@
         <span [hidden]="!searchDone">
           Total 
           <ion-badge>({{searchResultCount}})</ion-badge>
-          matching item(s) found
+          matching item(s) found &nbsp;<ion-spinner></ion-spinner>
         </span>
       </h3>
       <div *ngIf="!searchDone" class="spinner-container">
@@ -25,7 +25,7 @@
       </div>
       <div [hidden]="!searchDone">
         <div class="col-sm-3 padding0 result-filter-web">
-			<search-filter></search-filter>
+			<search-filter (emitToParent) = "triggerWebSearch($event)"></search-filter>
         </div>
       </div>
       <div class="col-sm-9 padding0">

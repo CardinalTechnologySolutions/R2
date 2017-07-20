@@ -1,17 +1,18 @@
-import { Component } from '@angular/core';
-import { NavController, NavParams, ToastController, ModalController} from 'ionic-angular';
+import { Component} from '@angular/core';
+import { NavController, NavParams, ToastController, ModalController , Platform} from 'ionic-angular';
 
 import { Items } from '../../providers/providers';
 import { Restaurant } from '../../providers/providers';
 import { SearchFilter } from '../modal/search-filter';
 
+
 @Component({
   selector: 'page-item-detail',
   templateUrl: 'item-detail.html'
 })
-export class ItemDetailPage {
+export class ItemDetailPage{
+  mobile: any = false;
   item: any;
-  review: any  = 4;
   searchResultCount: any = 0;
   searchDone: any = true;
   range = {val:"4"};
@@ -29,24 +30,30 @@ export class ItemDetailPage {
 		range:this.range.val,
 		limit:20
 	};
-
   constructor(
 	public navCtrl: NavController, 
 	navParams: NavParams, 
 	items: Items, 
 	public restaurant: Restaurant, 
 	public toastCtrl: ToastController,
-	public modalCtrl: ModalController
+	public modalCtrl: ModalController,
+	public platform: Platform
 	) {
-    this.item = navParams.get('item') || items.defaultItem;
+		if(this.platform.is("mobile")){
+			this.mobile = true;
+		}
+		this.item = navParams.get('item') || items.defaultItem;	
   }
   ionViewDidLoad() {
 		this.getSearchResult(4);
   }
+  triggerWebSearch(event){
+	console.log("event received" + event);
+	this.getSearchResult(event);
+  }
   getSearchResult(val){	
 	var me = this;
 	me.resultFound = true;
-	this.review = val;
 	this.searchDTO.range = val;
 	this.searchDone = true;
 	me.searchResultCount = 0;
