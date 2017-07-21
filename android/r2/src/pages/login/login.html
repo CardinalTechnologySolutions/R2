@@ -1,51 +1,40 @@
 <!-- <ion-header> -->
-
-  <!-- <ion-navbar> -->
-    <!-- <ion-title>{{ 'LOGIN_TITLE' | translate }}</ion-title> -->
-  <!-- </ion-navbar> -->
-
+<!-- <ion-navbar> -->
+<!-- <ion-title>{{ 'LOGIN_TITLE' | translate }}</ion-title> -->
+<!-- </ion-navbar> -->
 <!-- </ion-header> -->
 <ion-content>
-<div class="splash-bg"></div>
-	<div class="container custom-container">
-	   <div class="logo-box">
-	   <div class="col-sm-12 mobile-logo">
-		   <img src="assets/img/appicon-mobile.png" class="logo-mb" alt="mobile logo">
-		</div>
-		</div>
-		<div class="bg-container">
-			<div class="col-sm-12 login-with-social">
-			   <h4>login with</h4>
-			   <ul>
-			   <li class="fb-circle"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-			   <li class="google-circle"><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-			   <li class="twitter-circle"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-			   </ul>
-			   <div class="or-style"></div>
-			</div>
-			<div class="col-sm-12 login-bx">
-				<form (submit)="doLogin()">
-					<div class="col-sm-12 mobile-padding">
-					  <input [(ngModel)]="account.username" name="username"  class="custom-input" type="text" />
-					  <input [(ngModel)]="account.password" name="password" class="custom-input" type="password"  />
-
-					  
-					  <button class="login-btn" type="submit">{{ 'LOGIN_BUTTON' | translate }}</button>
-					  <button class="reset-btn" type="submit">Reset</button>
-				   </div>
-
-				   <div class="col-sm-12 mobile-padding">
-					   <span class="psw pull-left f-password"><a href="#" (click)="signup()">Create a new account</a></span>
-					   <span class="psw pull-right f-password"> <a href="#">Forgot password?</a></span>
-
-				   </div>
-				</form>
-				
-			</div>
-		</div>
-
-	</div> 
+  <div class="splash-bg"></div>
+  <div class="container custom-container">
+    <div class="logo-box">
+      <div class="col-sm-12 mobile-logo">
+        <img src="assets/img/appicon-mobile.png" class="logo-mb" alt="mobile logo">
+      </div>
+    </div>
+    <div class="bg-container">
+      <div class="col-sm-12 login-with-social">
+        <h4>login with</h4>
+        <ul>
+          <li class="fb-circle"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+          <li class="google-circle"><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+          <li class="twitter-circle"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+        </ul>
+        <div class="or-style"></div>
+      </div>
+      <div class="col-sm-12 login-bx">
+        <form (submit)="doLogin()">
+          <div class="col-sm-12 mobile-padding">
+            <input [(ngModel)]="account.username" name="username"  class="custom-input" type="text" />
+            <input [(ngModel)]="account.password" name="password" class="custom-input" type="password"  />
+            <button class="login-btn" type="submit">{{ 'LOGIN_BUTTON' | translate }}</button>
+            <button class="reset-btn" type="submit">Reset</button>
+          </div>
+          <div class="col-sm-12 mobile-padding">
+            <span class="psw pull-left f-password"><a href="#" (click)="signup()">Create a new account</a></span>
+            <span class="psw pull-right f-password"> <a href="#">Forgot password?</a></span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
 </ion-content>
-
-
-

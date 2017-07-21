@@ -7,17 +7,16 @@
   <div class="item-profile" text-center #profilePic [style.background-image]="'url(' + item.profilePic + ')'">
   </div>
     <div class="filter-btn-group">
-	  <button ion-button (click)="showSearchFilter()">Search Filter</button> 
+	  <button ion-button (click)="showSearchFilter()">Search Restaurants</button> 
   </div>
   <div class="container">  
  
     <div class="col-sm-12 detail-box">
       <h3>
-        Search Results : 
-        <span [hidden]="!searchDone">
-          Total 
+        <span class="search-heading" >Search Result : </span>
+        <span class="search-heading-result" [hidden]="!searchDone">
           <ion-badge>({{resultItems.length}})</ion-badge>
-          matching item(s) found
+          restaurant(s) found
         </span>
       </h3>
       <div *ngIf="!searchDone" class="spinner-container">

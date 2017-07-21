@@ -51,7 +51,7 @@ export class ItemDetailPage{
 			me.resultItems.push(tmp["restaurantSearchResult"][i]);
 		  }
 	  }
-        
+  
     }, (err) => {
       // Unable to log in
       let toast = this.toastCtrl.create({
@@ -62,8 +62,7 @@ export class ItemDetailPage{
       toast.present();
     });
   }
-  showSearchFilter(){
-	this.searchDone = false;
+  showSearchFilter(){	
 	var modalPage = this.modalCtrl.create(SearchFilter, {review:this.searchDTO.range}, {
         showBackdrop: false,
         enableBackdropDismiss: false,
@@ -71,6 +70,7 @@ export class ItemDetailPage{
     });
 	modalPage.onDidDismiss(data => {
 		if(data.action === 'search'){
+			this.searchDone = false;
 			this.getSearchResult(data.review);
 		}	 
 	});

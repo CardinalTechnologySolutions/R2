@@ -1,67 +1,58 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-<head>
+  <head>
   <script data-ionic="inject">
     (function(w){var i=w.Ionic=w.Ionic||{};i.version='3.3.0';i.angular='4.1.2';i.staticDir='build/';})(window);
   </script>
-  <meta charset="UTF-8">
-  <title>Ratings & Reviews Portal for Restaurants by Cardinal TS </title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <meta name="format-detection" content="telephone=no">
-  <meta name="msapplication-tap-highlight" content="no">
-
-  <link rel="icon" type="image/x-icon" href="assets/icon/favicon.png">
-  <link rel="stylesheet" href="assets/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="manifest" href="manifest.json">
-  <meta name="theme-color" content="#4e8ef7">
- 
-  <!-- cordova.js required for cordova apps -->
-  <script src="cordova.js"></script>
-
-  <!-- un-comment this code to enable service worker
-  <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('service-worker.js')
-        .then(() => console.log('service worker installed'))
-        .catch(err => console.error('Error', err));
-    }
-  </script>-->
-
-  <link href="build/main.css" rel="stylesheet">
-
-</head>
-<body>
-
-<div class="splash-info web-header">
-   <div class="container">
-    <div class="col-sm-12 padding0">
-	<div class="col-sm-3 padding0">
-	<a href="index.html" class="logo"><img src="assets/img/appicon.png"></a>
-	</div>
-		<div class="col-sm-6 web-nav">
-		   <ul>
-				  <li><a href="index.html">Home</a></li>
-				  <li><a href="#">About us</a></li>
-				  <li><a href="#">Services</a></li>
-				</ul>
-		</div>
-			<div class="col-sm-3 my-account">
-			<div class="pull-right">
-			   <i class="fa fa-user-circle-o" aria-hidden="true"></i> <a href="#">Account</a>
-	        </div>
-			 </div>
-	</div>
-	</div>
-
-  </div>
-  <!-- Ionic's root component and where the app will load -->
-  <ion-app></ion-app>
-  <!-- The polyfills js is generated during the build process -->
-  <script src="build/polyfills.js"></script>
-  <!-- The bundle js is generated during the build process -->
-  <script src="build/main.js"></script>
-       
-
-</body>
+    <meta charset="UTF-8">
+    <title>Ratings & Reviews Portal for Restaurants by Cardinal TS </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <link rel="icon" type="image/x-icon" href="assets/icon/favicon.png">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#4e8ef7">
+    <!-- cordova.js required for cordova apps -->
+    <script src="cordova.js"></script>
+    <!-- un-comment this code to enable service worker
+      <script>
+        if ('serviceWorker' in navigator) {
+          navigator.serviceWorker.register('service-worker.js')
+            .then(() => console.log('service worker installed'))
+            .catch(err => console.error('Error', err));
+        }
+      </script>-->
+    <link href="build/main.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="splash-info web-header">
+      <div class="container">
+        <div class="col-sm-12 padding0">
+          <div class="col-sm-3 padding0">
+            <a href="index.html" class="logo"><img src="assets/img/appicon.png"></a>
+          </div>
+          <div class="col-sm-6 web-nav">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Services</a></li>
+            </ul>
+          </div>
+          <div class="col-sm-3 my-account">
+            <div class="pull-right">
+              <i class="fa fa-user-circle-o" aria-hidden="true"></i> <a href="#">Account</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Ionic's root component and where the app will load -->
+    <ion-app></ion-app>
+    <!-- The polyfills js is generated during the build process -->
+    <script src="build/polyfills.js"></script>
+    <!-- The bundle js is generated during the build process -->
+    <script src="build/main.js"></script>
+  </body>
 </html>
