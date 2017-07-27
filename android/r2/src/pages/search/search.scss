@@ -139,7 +139,10 @@ button.item.item-block.item-md {
 .list-md .item-block .item-inner {
     border-bottom: 0;
 }
-
+.result-box img {
+    height: 200px;
+    width: 100%;
+}
 
 @media (max-width:767px) {
 
