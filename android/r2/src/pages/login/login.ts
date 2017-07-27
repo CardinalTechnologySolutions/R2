@@ -60,12 +60,12 @@ export class LoginPage {
     this.user.login(this.account).subscribe((resp) => {
 	  setTimeout(() => {
 		loading.dismiss();
-	  }, 2000);
+	  }, 1000);
       this.navCtrl.push(MainPage);
     }, (err) => {
 	  setTimeout(() => {
 		loading.dismiss();
-	  }, 2000);
+	  }, 1000);
       this.navCtrl.push(MainPage);
       // Unable to log in
       let toast = this.toastCtrl.create({

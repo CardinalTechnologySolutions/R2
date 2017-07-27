@@ -2,18 +2,21 @@
   <ion-navbar>
     <ion-title>{{ item.name }}</ion-title>
   </ion-navbar>
+  <ion-toolbar class="sticky-btn" [hidden] = "!scrolledToTop">
+		<span (click)="showSearchFilter()">Search Restaurants</span> 
+  </ion-toolbar>
 </ion-header>
-<ion-content>
+<ion-content (ionScroll)="scrollHandler($event)" id="content-holder">
   <div class="item-profile" text-center #profilePic [style.background-image]="'url(' + item.profilePic + ')'">
-  </div>
-    <div class="filter-btn-group">
+  </div>  
+    <div class="filter-btn-group"  [hidden] = "scrolledToTop" id="search-filter">
 	  <button ion-button (click)="showSearchFilter()">Search Restaurants</button> 
-  </div>
+	</div>
   <div class="container">  
  
     <div class="col-sm-12 detail-box">
       <h3>
-        <span class="search-heading" >Search Result : </span>
+        <span class="search-heading" >Search result : </span>
         <span class="search-heading-result" [hidden]="!searchDone">
           <ion-badge>({{resultItems.length}})</ion-badge>
           restaurant(s) found

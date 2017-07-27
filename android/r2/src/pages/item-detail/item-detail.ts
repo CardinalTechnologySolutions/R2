@@ -1,5 +1,5 @@
-import { Component} from '@angular/core';
-import { NavController, NavParams, ToastController, ModalController} from 'ionic-angular';
+import { Component, NgZone } from '@angular/core';
+import { NavController, NavParams, ToastController, ModalController, Platform} from 'ionic-angular';
 
 import { Items } from '../../providers/providers';
 import { Restaurant } from '../../providers/providers';
@@ -11,6 +11,9 @@ import { SearchFilter } from '../modal/search-filter';
   templateUrl: 'item-detail.html'
 })
 export class ItemDetailPage{
+  mobile: any = false;
+  distanceFromTop: any = -99999;
+  scrolledToTop: any = false;
   item: any;
   searchDone: any = false;
   range = {val:"4"};
@@ -28,13 +31,49 @@ export class ItemDetailPage{
 	items: Items, 
 	public restaurant: Restaurant, 
 	public toastCtrl: ToastController,
-	public modalCtrl: ModalController
+	public modalCtrl: ModalController,
+	private zone: NgZone,
+	public platform: Platform
 	) {
 		this.item = navParams.get('item') || items.defaultItem;	
+		if(this.platform.is("mobile")){
+			this.mobile = true;
+		}
   }
   ionViewDidLoad() {
-		this.getSearchResult(4);
+	this.distanceFromTop = 0;
+	this.getSearchResult(4);	
   }
+  scrollHandler(event){	
+	if(!this.mobile || this.distanceFromTop == event.scrollTop)return;
+	//console.log('event = ' + JSON.stringify(event));
+	var top = this.getPositionFromTop(document.getElementById('search-filter'));
+	
+	if(this.distanceFromTop < event.scrollTop){ // Scroll down, content moving up
+		if(top && top <= 57 && !this.scrolledToTop){
+			this.zone.run(() => {				
+				this.scrolledToTop = true;
+				this.distanceFromTop = event.scrollTop;
+			});
+		 }
+	}else{ // Scroll up, content moving down	
+		if(!top && this.scrolledToTop){
+			this.zone.run(() => {
+				this.scrolledToTop = false;
+				this.distanceFromTop = event.scrollTop;
+			});
+		 }
+	}
+	 
+  }
+  getPositionFromTop(elem) { 
+		var top = 0;
+		do { 
+			top += elem.offsetTop-elem.scrollTop; 
+		} while ( elem = elem.offsetParent ); 
+
+		return top; 
+	} 
   triggerWebSearch(event){
 	this.searchDone = false;
 	this.getSearchResult(event);
