@@ -3,13 +3,10 @@ import { Platform, Nav, Config } from 'ionic-angular';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { ContentPage } from '../pages/content/content';
 import { FirstRunPage } from '../pages/pages';
-import { ListMasterPage } from '../pages/list-master/list-master';
 import { LoginPage } from '../pages/login/login';
 import { SearchPage } from '../pages/search/search';
 import { SignupPage } from '../pages/signup/signup';
-//import { WelcomePage } from '../pages/welcome/welcome';
 
 import { Settings } from '../providers/providers';
 
@@ -40,10 +37,8 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   pages: any[] = [
-    { title: 'Content', component: ContentPage },
     { title: 'Login', component: LoginPage },
     { title: 'Signup', component: SignupPage },
-    { title: 'Master Detail', component: ListMasterPage },
     { title: 'Search', component: SearchPage }
   ]
 

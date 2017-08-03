@@ -1,4 +1,4 @@
-<ion-header>
+<ion-header>	
   <ion-navbar>
     <ion-title>{{ item.name }}</ion-title>
   </ion-navbar>
@@ -7,6 +7,7 @@
   </ion-toolbar>
 </ion-header>
 <ion-content (ionScroll)="scrollHandler($event)" id="content-holder">
+<main-header></main-header>
   <div class="item-profile" text-center #profilePic [style.background-image]="'url(' + item.profilePic + ')'">
   </div>  
     <div class="filter-btn-group"  [hidden] = "scrolledToTop" id="search-filter">
