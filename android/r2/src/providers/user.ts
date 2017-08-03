@@ -37,13 +37,15 @@ export class User {
   login(accountInfo: any) {
 		let headers = new Headers();
         headers.append('Content-Type', 'application/x-www-form-urlencoded');
-        let urlSearchParams = new URLSearchParams();
+        /*let urlSearchParams = new URLSearchParams();
         urlSearchParams.append('username', accountInfo.username);
         urlSearchParams.append('password', accountInfo.password);
 		urlSearchParams.append('client_id', accountInfo.clientId);
 		urlSearchParams.append('client_secret', accountInfo.clientSecret);
 		urlSearchParams.append('grant_type', accountInfo.grantType);
-        let body = urlSearchParams.toString();
+        let body = urlSearchParams.toString();*/
+		let body = "username="+accountInfo.username+"&password="+accountInfo.password+"&client_id="+accountInfo.clientId+"&client_secret="+accountInfo.clientSecret+"&grant_type="+accountInfo.grantType;
+		alert("body = "+ body);
 		let options = new RequestOptions({headers:headers, method: RequestMethod.Post});
 		let seq = this.api.post('oauth/token', body, options).share();
 		seq
