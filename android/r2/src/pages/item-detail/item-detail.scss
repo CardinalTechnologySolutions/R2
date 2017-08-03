@@ -326,4 +326,16 @@ page-item-detail {
 			min-height: 170px;
 		}
 	}
+	@media (max-width:320px) {
+		.search-heading-result {
+			top: -3px;
+			font-size: 14px;
+		}
+		.search-heading {
+			font-size: 17px;
+		}
+		.toolbar-ios {
+			min-height: 45px;
+		}
+	}
 }
