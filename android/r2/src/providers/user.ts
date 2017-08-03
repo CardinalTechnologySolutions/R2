@@ -45,7 +45,7 @@ export class User {
 		urlSearchParams.append('grant_type', accountInfo.grantType);
         let body = urlSearchParams.toString();*/
 		let body = "username="+accountInfo.username+"&password="+accountInfo.password+"&client_id="+accountInfo.clientId+"&client_secret="+accountInfo.clientSecret+"&grant_type="+accountInfo.grantType;
-		alert("body = "+ body);
+		
 		let options = new RequestOptions({headers:headers, method: RequestMethod.Post});
 		let seq = this.api.post('oauth/token', body, options).share();
 		seq

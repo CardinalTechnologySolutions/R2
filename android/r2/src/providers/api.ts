@@ -8,12 +8,10 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class Api {
 	url: string = 'http://14.141.82.190:8080/ctswebscrapingservices';
-	/*url: string = 'http://192.168.1.222:8080/ctswebscrapingservices';*/
   constructor(public http: Http) {
   }
 
   get(endpoint: string, params?: any, options?: RequestOptions) {
-	alert("params = "+ JSON.stringify(params, null, 4));
     if (!options) {
       options = new RequestOptions();
     }
@@ -28,8 +26,6 @@ export class Api {
       // Set the search field if we have params and don't already have
       // a search field set in options.
       options.search = !options.search && params || options.search;
-	 // alert(JSON.stringify(options.search.paramsMap, null, 4));
-	 // alert(JSON.stringify(options.search.rawParams, null, 4));
     }
 	
 

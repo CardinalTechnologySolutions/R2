@@ -23,7 +23,7 @@ export class Items {
 		"rating": "*****",
 		"special": "Did you know: New York is the fourth-most-populous city in the Americas (8,550,405).",
         "profilePic": "assets/img/cities/new-yark-city.jpg",
-        "about": "New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean. At its core is Manhattan, a densely populated borough that’s among the world’s major commercial, financial and cultural centers. Its iconic sites include skyscrapers such as the Empire State Building and sprawling Central Park. Broadway theater is staged in neon-lit Times Square."
+        "about": "New York City."
       },
       {
         "name": "Washington",
