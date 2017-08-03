@@ -5,6 +5,7 @@ import { MainPage } from '../../pages/pages';
 import { User } from '../../providers/user';
 
 import { TranslateService } from '@ngx-translate/core';
+import { LoginPage } from '../login/login';
 
 
 @Component({
@@ -50,5 +51,8 @@ export class SignupPage {
       });
       toast.present();
     });
+  }
+  backToLogin(){
+	this.navCtrl.push(LoginPage);
   }
 }

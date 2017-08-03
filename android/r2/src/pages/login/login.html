@@ -22,12 +22,18 @@
         <div class="or-style"></div>
       </div>
       <div class="col-sm-12 login-bx">
-        <form (submit)="doLogin()">
+        <form [formGroup]="loginForm" (ngSubmit)="doLogin()">
           <div class="col-sm-12 mobile-padding">
-            <input [(ngModel)]="account.username" name="username"  class="custom-input" type="text" />
-            <input [(ngModel)]="account.password" name="password" class="custom-input" type="password"  />
-            <button class="login-btn" type="submit">{{ 'LOGIN_BUTTON' | translate }}</button>
-            <button class="reset-btn" type="submit">Reset</button>
+            <ion-input formControlName="username" type="text" class="custom-input" placeholder="Enter Username"></ion-input>
+            <ion-input formControlName="password" type="password" class="custom-input" placeholder="Enter password"></ion-input>
+            <button class="login-btn" type="submit">
+				{{ 'LOGIN_BUTTON' | translate }} &nbsp;
+				<ion-icon name="log-in"></ion-icon>
+			</button>
+            <button class="reset-btn" type="reset">
+				{{ 'RESET_BUTTON' | translate }} &nbsp;
+				<ion-icon name="refresh"></ion-icon>
+			</button>
           </div>
           <div class="col-sm-12 mobile-padding">
             <span class="psw pull-left f-password"><a href="#" (click)="signup()">Create a new account</a></span>

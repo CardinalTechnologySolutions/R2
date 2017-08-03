@@ -35,9 +35,9 @@
 			<div class="result-box" [hidden] = "resultItems.length > 0"></div>
 		</div>
         
-        <div class="result-container" *ngFor="let item of resultItems">
+        <div class="result-container" *ngFor="let item of resultItems; let i = index;">
           <div class="col-sm-3">
-            <img class="img-responsive result-thumb" src="assets/img/restaurant/6.jpg" alt=""> 
+            <img class="img-responsive result-thumb" src="assets/img/restaurant/{{i+1}}.jpg" alt=""> 
           </div>
           <div class="col-sm-3 padding0 mobile-padding">
             <h4><a href="#">{{item.name}}</a></h4>

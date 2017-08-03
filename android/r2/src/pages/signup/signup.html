@@ -21,7 +21,7 @@
     <input class="custom-input" type="password" [(ngModel)]="account.password" name="password" required>
 	 <input class="custom-input" type="password" [(ngModel)]="account.password" placeholder="Confirm Password" name="Confirm Password" required>
 	    <button class="register-btn" type="submit">{{ 'SIGNUP_BUTTON' | translate }}</button>
-		<button class="back-btn" type="submit">Back</button>
+		<button class="back-btn" type="button" (click)="backToLogin()">Back</button>
    </div>
 
 </form>

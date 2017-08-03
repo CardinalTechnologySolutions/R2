@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http, RequestOptions, URLSearchParams } from '@angular/http';
+import { Http, RequestOptions, URLSearchParams} from '@angular/http';
 import 'rxjs/add/operator/map';
 
 /**
@@ -7,7 +7,7 @@ import 'rxjs/add/operator/map';
  */
 @Injectable()
 export class Api {
-	url: string = 'http://192.168.1.217:8080/ctswebscrapingservices';
+	url: string = 'http://14.141.82.190:8080/ctswebscrapingservices';
   constructor(public http: Http) {
   }
 
@@ -15,7 +15,8 @@ export class Api {
     if (!options) {
       options = new RequestOptions();
     }
-
+	
+	/*
     // Support easy query params for GET requests
     if (params) {
       let p = new URLSearchParams();
@@ -25,7 +26,7 @@ export class Api {
       // Set the search field if we have params and don't already have
       // a search field set in options.
       options.search = !options.search && p || options.search;
-    }
+    }*/
 
     return this.http.get(this.url + '/' + endpoint, options);
   }
