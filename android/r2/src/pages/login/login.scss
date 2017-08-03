@@ -161,11 +161,14 @@ page-login {
 	.custom-input {
 		width: 100%;
 		height:40px;
-		padding: 8px;
+		padding: 0 3px;
 		background: transparent;
 		margin: 5px 0;
 		border: solid 1px #fff;
 		color: #fff;
+	}
+	.custom-input .text-input-md {
+		margin-top: 11px;
 	}
 	.custom-input:focus {
 		border: solid 1px #00b4e7;
@@ -274,6 +277,7 @@ page-login {
 		}
 		.custom-input {
 			color: #fff;
+		    padding: 0 10px;
 		}
 		.custom-input:focus {
 			border: solid 1px #fff;

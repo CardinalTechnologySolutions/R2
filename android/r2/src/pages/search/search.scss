@@ -174,7 +174,11 @@ h3::before {
     padding: 0 16px !important;
 }
 .searchbar-input-container {
-    padding: 20px 0px 0 0px;
+    padding: 0px;
+}
+.search-position .searchbar-ios {
+    background: transparent;
+    border: 0;
 }
 .searchbar-md .searchbar-search-icon {
     left: 10px;
@@ -183,9 +187,24 @@ h3::before {
 input.searchbar-input {
     padding: 6px 40px !important;
 }
+.searchbar-ios input.searchbar-input {
+    padding: 18px 40px !important;
+}
+.searchbar-input-container .searchbar-search-icon {
+    top: 14px !important;
+    left: 14px !important;
+}
+.search-position ion-list.list.list-ios {
+    padding: 0 10px;
+	margin-top: -4px;
+	margin-bottom: 0;
+}
+.search-position .list-ios .label {
+    text-align: left;
+}
 .searchbar-md .searchbar-clear-icon {
-    right: 10px;
-    top: 30px;
+    right: 14px;
+    top: 10px;
 }
 .result-box {
     padding: 0px;

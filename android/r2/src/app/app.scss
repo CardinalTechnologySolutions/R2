@@ -19,8 +19,9 @@
   background:#ebeced;
   overflow-y: initial;
 }
-.header-md .toolbar-background.toolbar-background-md {
+.header .toolbar-background {
     background: #00b4e7;
+    border: 0;
 }
 .bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default {
     color: #ffffff;
@@ -32,9 +33,10 @@
 .bar-button-default-md:hover:not(.disable-hover), .bar-button-clear-md-default:hover:not(.disable-hover), .bar-button-md-default:hover:not(.disable-hover) {
     color: #efefef;
 }
-.toolbar-background-md {
+.footer .toolbar-background {
     border-color: #000000;
     background: #4a4a4a;
+    border: 0;
 }
 .copy-r {
     text-align: center;
@@ -113,6 +115,20 @@ ion-modal ion-backdrop {
 .web-header {
     display:none;
 }
+.title-ios .toolbar-title-ios {
+    color: #fff;
+}
+.back-button-ios {
+    color: #fff;
+}
+ion-title.title.title-ios {
+    padding: 0 10px;
+}
+ion-header.header.header-ios {
+    box-shadow: 0 0 13px #8c8c8c;
+}
+
+
 }
 
 [hidden] {
