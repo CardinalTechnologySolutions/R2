@@ -278,6 +278,9 @@ page-item-detail {
 		max-height: 120px;
 		min-height: 120px;
 	}
+	.search-detail-nav {
+		min-height: 40px;
+	}
 	@media (max-width:767px) {
 		img.result-thumb {
 			width: 100%;
