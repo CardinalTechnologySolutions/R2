@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { NavController, NavParams } from 'ionic-angular';
-
+import { NavController, NavParams, Config} from 'ionic-angular';
+import { MainPage } from '../../pages/pages';
 
 
 @Component({
@@ -11,11 +11,17 @@ import { NavController, NavParams } from 'ionic-angular';
 export class HeaderPage {
   searchControl: FormControl;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) { 
+  constructor(public navCtrl: NavController, public navParams: NavParams, private config: Config) { 
 	this.searchControl = new FormControl();
   }
 
  
   ionViewDidLoad() {
+  }
+   goToHome() {	
+	var token = this.config.get('r3_access_token');
+	if(token != null && token != undefined){
+		this.navCtrl.push(MainPage);
+	}    
   }
 }

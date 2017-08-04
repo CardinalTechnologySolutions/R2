@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, ToastController, LoadingController, Platform} from 'ionic-angular';
+import { NavController, ToastController, LoadingController, Platform, Config} from 'ionic-angular';
 
 import { MainPage } from '../../pages/pages';
 
@@ -51,7 +51,8 @@ export class LoginPage {
     public translateService: TranslateService,
 	public loader: LoadingController,
 	public formBuilder: FormBuilder,
-	public platform: Platform
+	public platform: Platform,
+	private config: Config
 	) {
 	if(this.platform.is("mobile")){
 		this.mobile = true;
@@ -96,6 +97,8 @@ export class LoginPage {
 	  loading.present();
 	
     this.user.login(this.account).subscribe((resp) => {
+	  var response = resp.json();
+	  this.config.set('r3_access_token', response.access_token);
 	  setTimeout(() => {
 		loading.dismiss();
 	  }, 1000);
@@ -104,7 +107,6 @@ export class LoginPage {
 	  setTimeout(() => {
 		loading.dismiss();
 	  }, 1000);
-      this.navCtrl.push(MainPage);
       // Unable to log in
       let toast = this.toastCtrl.create({
         message: this.loginErrorString,
