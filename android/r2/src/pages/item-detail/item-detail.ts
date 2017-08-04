@@ -50,7 +50,7 @@ export class ItemDetailPage{
 	var top = this.getPositionFromTop(document.getElementById('search-filter'));
 	
 	if(this.distanceFromTop < event.scrollTop){ // Scroll down, content moving up
-		if(top && top <= 57 && !this.scrolledToTop){
+		if(top && top <= 50 && !this.scrolledToTop){
 			this.zone.run(() => {				
 				this.scrolledToTop = true;
 				this.distanceFromTop = event.scrollTop;

@@ -98,18 +98,21 @@ page-login {
 	}
 	.fb-circle a {
 		color: #fff;
+		font-size: 20px;
 	}
 	.fb-circle a:hover {
 		color: #ccc;
 	}
 	.google-circle a {
 		color: #fff;
+	    font-size: 20px;
 	}
 	.google-circle a:hover {
 		color: #ccc;
 	}
 	.twitter-circle a {
 		color: #fff;
+	    font-size: 20px;
 	}
 	.twitter-circle a:hover {
 		color: #ccc;
@@ -124,17 +127,18 @@ page-login {
 		list-style-type: none;
 		padding: 0;
 		text-align: center;
+	    margin-top: 25px;
 	}
 	.login-with-social ul li {
 		display: inline-block;
 		margin: 0 10px;
 		border-radius: 50%;
 		text-align: center;
-		padding: 10px;
+		padding: 8px;
 		color: #fff;
 		font-size: 22px;
-		width: 50px;
-		height: 50px;
+		width: 45px;
+		height: 45px;
 	}
 	.custom-container {
 		max-width: 600px;
@@ -208,29 +212,18 @@ page-login {
 		margin-top: 120px;
 	}
 	.or-style {
-		width: 30px;
-		height: 30px;
-		margin: 30px auto 40px auto;
-		position: relative;
-	}
-	.or-style::before {
-		position: absolute;
-		content: "";
 		width: 35px;
 		height: 35px;
-		background: #00b4e7;
-		-webkit-transform: rotate(47deg) translateY(10px);
-		transform: rotate(47deg) translateY(10px);
-		border: 3px double #fff;
-	}
-	.or-style::after {
-		position: absolute;
-		content: "OR";
-		left: 2px;
-		font-size: 13px;
-		top: 15px;
+		margin: 30px auto 40px auto;
+		position: relative;
+		border: solid 1px #fff;
+		text-align: center;
 		color: #fff;
+		padding: 7px;
+		box-sizing: border-box;
+		font-size: 16px;
 	}
+	
 	@media (max-width:767px) {
 		.splash-info {
 			display: none;
