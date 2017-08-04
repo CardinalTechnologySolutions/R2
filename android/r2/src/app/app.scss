@@ -136,6 +136,13 @@ ion-modal ion-backdrop {
 		}
 		button.bar-button.bar-button-ios.bar-button-default.bar-button-default-ios {
 			color: #ffffff !important;
+			background: #fff;
+			padding: 6px 10px;
+			height: 25px;
+			font-size: 13px;
+		}
+		.back-button {
+		    background: transparent !important;
 		}
 
 	}

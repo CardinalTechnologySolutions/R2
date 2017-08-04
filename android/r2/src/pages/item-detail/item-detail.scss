@@ -296,6 +296,31 @@ page-item-detail {
 		color: #fff;
 	}
 	@media (max-width:767px) {
+		.search-detail-header {
+			position: fixed;
+		}
+		.search-heading-result {
+			border-bottom: 0;
+			font-size: 14px;
+		}
+		.search-heading {
+			border-bottom: 0;
+			font-size: 16px;
+		}
+		.detail-box h3 {
+			float: left;
+			width: auto;
+		}
+		.detail-box h3:before {
+			position: absolute;
+			content: "";
+			background: #00b4e7;
+			bottom: -4px;
+			width: 100%;
+		}
+	    .sticky-btn {
+			min-height: 38px !important;
+		}
 		.search-detail-header .toolbar-content-ios {
 			height: 47px;
 		}
@@ -303,10 +328,6 @@ page-item-detail {
 			width: 100%;
 			max-height: 180px;
 			min-height: 170px;
-		}
-		.search-heading{
-			padding-bottom: 2px;
-			font-size:18px;
 		}
 		.result-filter {
 			margin-right: 0 !important;
@@ -347,15 +368,11 @@ page-item-detail {
 		}
 	}
 	@media (max-width:320px) {
-		.search-heading-result {
-			top: -3px;
-			font-size: 14px;
-		}
-		.search-heading {
-			font-size: 17px;
-		}
 		.toolbar-ios {
 			min-height: 45px;
+		}
+		.search-detail-header .toolbar-content-ios {
+			height: 37px;
 		}
 	}
 }
