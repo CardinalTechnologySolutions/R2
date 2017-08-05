@@ -13,10 +13,10 @@ import { Settings } from '../providers/providers';
 import { TranslateService } from '@ngx-translate/core'
 
 @Component({
-  template: `<ion-menu [content]="content">
+  template: `<ion-menu [content]="content" type="overlay">
     <ion-header>
       <ion-toolbar>
-        <ion-title>Pages</ion-title>
+        <ion-title>Setting(s)</ion-title>
       </ion-toolbar>
     </ion-header>
 
@@ -37,9 +37,7 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   pages: any[] = [
-    { title: 'Login', component: LoginPage },
-    { title: 'Signup', component: SignupPage },
-    { title: 'Search', component: SearchPage }
+    { title: 'Logout', component: LoginPage }
   ]
 
   constructor(private translate: TranslateService, private platform: Platform, settings: Settings, private config: Config, private statusBar: StatusBar, private splashScreen: SplashScreen) {
