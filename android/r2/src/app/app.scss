@@ -104,6 +104,65 @@ ion-modal ion-backdrop {
 }
 .my-account a{ color:#333;}
 .my-account a:hover{ text-decoration:none;}
+.dropbtn {
+	background-color: transparent;
+    color: #333;
+    padding: 0;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    height: 30px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 130px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    margin-top: 7px;
+    left: -20px;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 6px 15px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    font-size: 14px;
+}
+
+.dropdown-content a:hover {
+	background-color: #f1f1f1;
+	color:#333;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    opacity: .7;
+}
+.dropdown-content:before {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: 40%;
+    top: -9px;
+    border-bottom: 8px solid #cccccc;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+}
 
 	@media (max-width:767px) {
 		.mobile-header{
