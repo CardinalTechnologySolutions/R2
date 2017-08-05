@@ -13,23 +13,7 @@ import { Settings } from '../providers/providers';
 import { TranslateService } from '@ngx-translate/core'
 
 @Component({
-  template: `<ion-menu [content]="content" type="overlay">
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Setting(s)</ion-title>
-      </ion-toolbar>
-    </ion-header>
-
-    <ion-content>
-      <ion-list>
-        <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
-          {{p.title}}
-        </button>
-      </ion-list>
-    </ion-content>
-
-  </ion-menu>
-  <ion-nav #content [root]="rootPage"></ion-nav>`
+  template: `<ion-nav [root]="rootPage"></ion-nav>`
 })
 export class MyApp {
   rootPage = FirstRunPage;
