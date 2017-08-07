@@ -22,7 +22,6 @@
 .header .toolbar-background {
     background: #00b4e7;
     border: 0;
-    position: fixed;
 }
 .bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default {
     color: #ffffff;
@@ -166,6 +165,9 @@ ion-modal ion-backdrop {
 }
 
 	@media (max-width:767px) {
+		.header .toolbar-background {
+			position: fixed;
+		}
 		.mobile-header{
 			display:block;
 			position: fixed;
