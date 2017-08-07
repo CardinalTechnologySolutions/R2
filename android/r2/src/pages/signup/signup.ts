@@ -53,6 +53,6 @@ export class SignupPage {
     });
   }
   backToLogin(){
-	this.navCtrl.push(LoginPage);
+	this.navCtrl.push(LoginPage,{},{animate:false});
   }
 }
