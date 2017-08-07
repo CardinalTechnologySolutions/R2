@@ -32,6 +32,16 @@
 			<search-filter (emitToParent) = "triggerWebSearch($event)"></search-filter>
         </div>
       </div>
+	  <div [hidden] ="!searchDone">
+		<nav class="pull-right" aria-label="Page navigation example">
+		  <ul class="pagination custom-pagination">
+			<li class="page-item"><a class="page-link" href="#">Previous</a></li>
+			<li class="page-item"><a class="page-link" href="#">1</a></li>
+			<li class="page-item"><a class="page-link" href="#">2</a></li>
+			<li class="page-item"><a class="page-link" href="#">3</a></li>
+			<li class="page-item"><a class="page-link" href="#">Next</a></li>
+		  </ul>
+		</nav>	
       <div class="col-sm-9 padding0">
 		<div [hidden] ="!searchDone">
 			<div class="result-box" [hidden] = "resultItems.length > 0"></div>
@@ -76,6 +86,16 @@
           </div>
         </div>
       </div>
+		  <nav class="pull-right" aria-label="Page navigation example">
+			  <ul class="pagination custom-pagination">
+				<li class="page-item"><a class="page-link" href="#">Previous</a></li>
+				<li class="page-item"><a class="page-link" href="#">1</a></li>
+				<li class="page-item"><a class="page-link" href="#">2</a></li>
+				<li class="page-item"><a class="page-link" href="#">3</a></li>
+				<li class="page-item"><a class="page-link" href="#">Next</a></li>
+			  </ul>
+		  </nav>
+	  </div>
     </div>
   </div>
 </ion-content>

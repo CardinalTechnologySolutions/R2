@@ -21,9 +21,9 @@ export class Items {
       {
         "name": "New York City",
 		"rating": "*****",
-		"special": "Did you know: New York is the fourth-most-populous city in the Americas (8,550,405).",
+		"special": "Did you know: New York is the fourth-most-populous city in the Americas (8,550,405)",
         "profilePic": "assets/img/cities/new-yark-city.jpg",
-        "about": "New York City."
+        "about": "New York City"
       },
       {
         "name": "Washington",

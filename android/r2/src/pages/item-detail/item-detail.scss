@@ -295,6 +295,14 @@ page-item-detail {
 	.sticky-btn .filter-icon  {
 		color: #fff;
 	}
+	.custom-pagination {
+		margin: 0 0 6px 0;
+	}
+	.custom-pagination a.page-link:hover,
+	.custom-pagination a.page-link:focus	{
+		background: #00b4e7;
+		color: #fff;
+	}
 	@media (max-width:767px) {
 		.search-detail-header {
 			position: fixed;
