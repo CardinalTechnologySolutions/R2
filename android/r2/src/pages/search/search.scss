@@ -73,16 +73,18 @@ input.searchbar-input {
     box-shadow: inherit !important;
     border: solid 1px #dedede;
     border-radius: 20px !important;
+    padding-bottom: 7px !important;
+    line-height: inherit !important;
 }
 .searchbar-has-value input.searchbar-input  {
 	border-radius: 10px 10px 0px 0px !important;
 }
 .searchbar-md .searchbar-search-icon {
-    top: 41px;
+    top: 37px;
 	left: 30px;
 }
 .searchbar-md .searchbar-clear-icon {
-    top: 37px;
+    top: 34px;
 	height: 25px;
     right: 30px;
 }
@@ -143,6 +145,7 @@ button.item.item-block.item-md {
     height: 200px;
     width: 100%;
 }
+
 
 @media (max-width:767px) {
 
