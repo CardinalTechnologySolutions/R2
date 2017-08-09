@@ -239,6 +239,7 @@ page-item-detail {
 		letter-spacing: 1px;
 		text-transform: uppercase;
 		box-shadow: 0 0px 8px #d0d0d0;
+	    padding-top: 3px;
 	}
 	.avg-rating {
 		max-width: 95px;
@@ -260,7 +261,7 @@ page-item-detail {
 	    line-height: 36px;
 	}
 	.sticky-btn .toolbar-background {
-		background: #929292 !important;
+		background: #929292;
 		width: 100%;
 		margin: 0;
 		height: 38px;
@@ -269,12 +270,18 @@ page-item-detail {
 		letter-spacing: 1px;
 		border-top: 0;
 	}
+	.sticky-btn .toolbar-background-ios {
+		background: #929292 !important;
+	}
 	.sticky-btn .toolbar-content.toolbar-content-ios {
 		height: 30px;
 		line-height: 30px;
 	}
 	.sticky-btn {
 		min-height: 38px;
+	}
+	.sticky-btn.toolbar-ios {
+ 		background: #929292 !important;
 	}
 	img.result-thumb {
 		width: 100%;
@@ -304,6 +311,12 @@ page-item-detail {
 		color: #fff;
 	}
 	@media (max-width:767px) {
+	    .floting {
+		    float:left !important;
+		}
+		.detail-box {
+			padding: 10px 0 20px 0;
+		}
 		.search-detail-header {
 			position: fixed;
 		}

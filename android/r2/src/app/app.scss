@@ -172,7 +172,7 @@ ion-modal ion-backdrop {
 			display:block;
 			position: fixed;
 			width: 100%;
-			z-index: 1;
+			z-index: 11;
 		}
 		.web-header {
 			display:none;
@@ -188,6 +188,7 @@ ion-modal ion-backdrop {
 		}
 		ion-header.header.header-ios {
 			box-shadow: 0 0 13px #8c8c8c;
+		    position: fixed;
 		}
 		.input-wrapper .label {
 			color: #000;
@@ -202,6 +203,7 @@ ion-modal ion-backdrop {
 			padding: 6px 10px;
 			height: 25px;
 			font-size: 13px;
+		    left: 7px;
 		}
 		.back-button {
 		    background: transparent !important;

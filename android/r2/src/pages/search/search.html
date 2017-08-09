@@ -1,5 +1,3 @@
-<ion-content>
-<main-header></main-header>
 <div class="mobile-header">
 <ion-header>
 	<ion-navbar>
@@ -9,6 +7,8 @@
 	</ion-navbar>
 </ion-header>
 </div>
+<ion-content>
+<main-header></main-header>
 <div class="container search-position">
    <h2 class="deal-text text-js">Find your ideal restaurant for the best price</h2>
    <ion-searchbar [(ngModel)]="searchTerm" [formControl]="searchControl" (ionInput)="onSearchInput()"></ion-searchbar>
