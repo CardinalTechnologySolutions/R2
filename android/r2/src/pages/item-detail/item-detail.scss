@@ -258,13 +258,13 @@ page-item-detail {
 		text-align: center;
 		color: #fff;
 		letter-spacing: 1px;
-	    line-height: 36px;
+	    line-height: 30px;
 	}
 	.sticky-btn .toolbar-background {
 		background: #929292;
 		width: 100%;
 		margin: 0;
-		height: 38px;
+		height: 39px;
 		border-radius: 0;
 		color: #ffffff;
 		letter-spacing: 1px;
@@ -312,7 +312,8 @@ page-item-detail {
 	}
 	@media (max-width:767px) {
 	    .floting {
-		    float:left !important;
+		    float: inherit !important;
+			text-align: center;
 		}
 		.detail-box {
 			padding: 10px 0 20px 0;
