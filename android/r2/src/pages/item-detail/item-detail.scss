@@ -310,6 +310,16 @@ page-item-detail {
 		background: #00b4e7;
 		color: #fff;
 	}
+	a.page-link {
+		pointer-events: none;
+		opacity: 0.5;
+	}
+	a.page-link.active{
+		background: #00b4e7;
+		color: #fff;
+		opacity: 1;
+		pointer-events: initial;
+	}
 	@media (max-width:767px) {
 	    .floting {
 		    float: inherit !important;
