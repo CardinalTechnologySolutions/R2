@@ -3,19 +3,18 @@
     <ion-title>{{ item.name }}</ion-title>
   </ion-navbar>
   <ion-toolbar class="sticky-btn" [hidden] = "!scrolledToTop">
-		<span (click)="showSearchFilter()"><i class="fa fa-sliders filter-icon" aria-hidden="true"></i>Search Restaurants</span> 
+	<span (click)="showSearchFilter()"><i class="fa fa-sliders filter-icon" aria-hidden="true"></i>Search Restaurants</span> 
   </ion-toolbar>
 </ion-header>
 <main-header></main-header>
 <ion-content (ionScroll)="scrollHandler($event)" id="content-holder">
   <div class="item-profile" text-center #profilePic [style.background-image]="'url(' + item.profilePic + ')'">
   </div>  
-  
+   
     <div class="filter-btn-group"  [hidden] = "scrolledToTop" id="search-filter">
 	  <button ion-button (click)="showSearchFilter()"><i class="fa fa-sliders filter-icon" aria-hidden="true"></i>Search Restaurants</button> 
 	</div>
-  <div class="container">  
- 
+  <div class="container">
     <div class="col-sm-12 detail-box">
       <h3>
         <span class="search-heading" >Search result : </span>
@@ -65,21 +64,21 @@
           </div>
           <div  class="col-sm-6">
             <!-- <h3><font color="red"><a href="#" title="" target="_blank"></a></font></h3> -->
-            <div class="col-sm-4 padding0 col-md-offset-1">
+            <div class="col-sm-4 col-xs-6 padding0 col-md-offset-1">
               <p>Yelp</p>
               <div class="custom-margin">	<img src="assets/img/rating/0.5.png" height="23" width="90" title="" /></div>
             </div>
-            <div class="col-sm-4 padding0 col-md-offset-1">
+            <div class="col-sm-4 col-xs-6 padding0 col-md-offset-1">
               <p>Google Reviews</p>
               <div class="custom-margin">	<img src="assets/img/rating/0.5.png" height="23" width="90" title="" /></div>
             </div>
-            <div class="col-sm-4 padding0 col-md-offset-1">
+            <div class="col-sm-4 col-xs-6 padding0 col-md-offset-1">
               <p>Trip Advisor</p>
               <div class="custom-margin">	
                 <img class="img-responsive" src="assets/img/rating/{{item.tripRatingStar}}" alt="" height="23" width="90">  
               </div>
             </div>
-            <div class="col-sm-4 padding0 col-md-offset-1">
+            <div class="col-sm-4 col-xs-6 padding0 col-md-offset-1">
               <p>Four Square</p>
               <div class="custom-margin"><img src="assets/img/rating/0.5.png" height="23" width="90" title="" /></div>
             </div>
