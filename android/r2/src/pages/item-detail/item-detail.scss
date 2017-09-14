@@ -152,6 +152,7 @@ page-item-detail {
 	}
 	.custom-margin {
 		margin-bottom: 8px;
+	    position:relative;
 	}
 	.result-container p {
 		margin-bottom: 2px;
@@ -319,6 +320,49 @@ page-item-detail {
 		color: #fff;
 		opacity: 1;
 		pointer-events: initial;
+	}
+	.shape-text{
+		color: #fff;
+		font-size: 11px;
+		font-weight: bold;
+		position: relative;
+		right: -36px;
+		top: 1px;
+		white-space: nowrap;
+	}
+	.shape{    
+		border-style: solid;
+		border-width: 0 80px 33px 0;
+		float: right;
+		height: 0px;
+		width: 0px;
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+		border-color: rgba(255, 255, 255, 0) #5cb85c rgba(255, 255, 255, 0) rgba(255, 255, 255, 0);
+	}
+	.google-count-box{
+		background: #fff;
+		border: 1px solid #5cb85c;
+		box-shadow: 0 0 5px #ddd;
+		overflow: hidden;
+		height: 35px;
+		margin-top: 6px;
+	}
+	a.count {
+		margin: 0;
+		position: absolute;
+		top: 7px;
+		left: 7px;
+		background: #00b4e7;
+		padding: 5px 4px 4px 4px;
+		border-radius: 5px;
+		color: #fff;
+		font-size: 14px;
+		line-height: 13px;
+		text-align:center;
+	}
+	.count:hover {
+	    text-decoration:none;
 	}
 	@media (max-width:767px) {
 	    .floting {
