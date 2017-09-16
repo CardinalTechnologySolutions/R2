@@ -326,13 +326,13 @@ page-item-detail {
 		font-size: 11px;
 		font-weight: bold;
 		position: relative;
-		right: -36px;
-		top: 1px;
+		right: -38px;
+		top: 0px;
 		white-space: nowrap;
 	}
 	.shape{    
 		border-style: solid;
-		border-width: 0 80px 33px 0;
+		border-width: 0 80px 28px 0;
 		float: right;
 		height: 0px;
 		width: 0px;
@@ -345,26 +345,75 @@ page-item-detail {
 		border: 1px solid #5cb85c;
 		box-shadow: 0 0 5px #ddd;
 		overflow: hidden;
-		height: 35px;
-		margin-top: 6px;
+		height: 30px;
+		position: relative;
+	}
+	.review-box {
+		padding: 0;
+	}
+	.review-box p {
+		margin: 6px 0 !important;
+		float: left;
+		width: 100%;
 	}
 	a.count {
 		margin: 0;
 		position: absolute;
-		top: 7px;
-		left: 7px;
+		top: 6px;
+		left: 6px;
 		background: #00b4e7;
 		padding: 5px 4px 4px 4px;
 		border-radius: 5px;
 		color: #fff;
-		font-size: 14px;
-		line-height: 13px;
-		text-align:center;
+		font-size: 11px;
+		line-height: 10px;
+		text-align: center;
 	}
 	.count:hover {
 	    text-decoration:none;
+	    background: #5cb85c;
+		opacity: 1;
 	}
+	.overlay {
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background: rgba(0, 0, 0, 0.1);
+		transition: opacity 500ms;
+		z-index: 99;
+		display:none;
+	}
+	.popup {
+		margin: auto;
+		padding: 20px;
+		background: #fff;
+		border-radius: 5px;
+		width: 30%;
+		position: relative;
+		transition: all 5s ease-in-out;
+		top: 40%;
+	}
+	.popup .close {
+		position: absolute;
+		top: 20px;
+		right: 30px;
+		transition: all 200ms;
+		font-size: 30px;
+		font-weight: bold;
+		text-decoration: none;
+		color: #333;
+	}
+	.popup .close:hover {
+	    color: #06D85F;
+	}
+
 	@media (max-width:767px) {
+		.review-box {
+			padding: 0 10px 0px 0px;
+			margin-bottom: 10px;
+		}
 	    .floting {
 		    float: inherit !important;
 			text-align: center;
