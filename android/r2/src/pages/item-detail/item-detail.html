@@ -49,34 +49,39 @@
         <div class="result-container" *ngFor="let item of resultItems; let i = index;">
           <div class="col-sm-3">
             <img class="img-responsive result-thumb" src="assets/img/restaurant/{{i+1}}.jpg" alt=""> 
+			<ul class="aggregate-ratings-box">
+			<li>Aggregate</li>
+			<li><img class="img-responsive star-ratings" src="assets/img/rating/4.5.png"></li>
+			</ul>
           </div>
-          <div class="col-sm-3 padding0 mobile-padding">
-            <h4><a href="#">{{item.name}}</a></h4>
+          <div class="col-sm-4 padding0 mobile-padding">
+            <h4><a href="#">{{item.title}}</a></h4>
             <ul class="meta-search">
               <li>
                 <div class="rating avg-rating">
-                  <img class="img-responsive" src="assets/img/rating/{{item.tripRatingStar}}" alt="">
+                  <img class="img-responsive" src="assets/img/rating/{{item.aggregateRatingStar}}" alt="">
                 </div>
               </li>
             </ul>
             <div class="hotel-address"><a href="#">New York, 0.4 km to Empire State Building (City centre)</a></div>
             <div class="review-count"><a href="#">80/100(655 review)</a></div>
           </div>
-          <div  class="col-sm-6">
-             <div class="col-sm-4 col-xs-6 review-box col-md-offset-1">
-              <p>Yelp</p>
+          <div  class="col-sm-5">
+		  <h4>Individual Ratings/Reviews</h4>
+             <div class="col-sm-6 col-xs-6 review-box">
+              <p>Trip Advisor</p>
  			  					<div class="google-count-box">
 						<div class="shape">
-							<div class="shape-text">Reviews</div>
+							<div class="shape-text">1000</div>
 						</div>
 						<div class="count-content">
 							<a href="#" class="lead count">
-								10
+								{{item.tripAdvRating?item.tripAdvRating:0}}
 							</a>
 						</div>
 						<div id="review-popup" class="overlay">
 							<div class="popup">
-								<h2>Google Reviews</h2>
+								<h2>Google</h2>
 								<a class="close" href="#">&times;</a>
 								<div class="content">
 									Data will be here.
@@ -85,42 +90,42 @@
 						</div>
 					</div>
              </div>
-            <div class="col-sm-4 col-xs-6 review-box col-md-offset-1">
-				  <p>Google Reviews</p>
+            <div class="col-sm-6 col-xs-6 review-box">
+				  <p>Google</p>
  					<div class="google-count-box">
 						<div class="shape">
-							<div class="shape-text">Reviews</div>
+							<div class="shape-text">0</div>
 						</div>
 						<div class="count-content">
 							<a href="#" class="lead count">
-								15
+								{{item.googleRating}}
 							</a>
 						</div>
 					</div>
  
             </div>
-            <div class="col-sm-4 col-xs-6 review-box col-md-offset-1">
-              <p>Trip Advisor</p>
+            <div class="col-sm-6 col-xs-6 review-box">
+              <p>Yelp</p>
  					<div class="google-count-box">
 						<div class="shape">
-							<div class="shape-text">Reviews</div>
+							<div class="shape-text">100</div>
 						</div>
 						<div class="count-content">
 							<a href="#" class="lead count">
-								25
+								{{item.yelpRating}}
 							</a>
 						</div>
 					</div>              
              </div>
-            <div class="col-sm-4 col-xs-6 col-md-offset-1 review-box">
+            <div class="col-sm-6 col-xs-6 review-box">
               <p>Four Square</p>
 			  					<div class="google-count-box">
 						<div class="shape">
-							<div class="shape-text">Reviews</div>
+							<div class="shape-text">5000</div>
 						</div>
 						<div class="count-content">
 							<a href="#" class="lead count">
-								32
+								{{item.fourSquareRating}}
 							</a>
 						</div>
 					</div>

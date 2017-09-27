@@ -326,13 +326,13 @@ page-item-detail {
 		font-size: 11px;
 		font-weight: bold;
 		position: relative;
-		right: -38px;
+		right: -48px;
 		top: 0px;
 		white-space: nowrap;
 	}
 	.shape{    
 		border-style: solid;
-		border-width: 0 80px 28px 0;
+		border-width: 0 100px 28px 0;
 		float: right;
 		height: 0px;
 		width: 0px;
@@ -349,7 +349,7 @@ page-item-detail {
 		position: relative;
 	}
 	.review-box {
-		padding: 0;
+		padding-left: 0;
 	}
 	.review-box p {
 		margin: 6px 0 !important;
@@ -407,6 +407,30 @@ page-item-detail {
 	}
 	.popup .close:hover {
 	    color: #06D85F;
+	}
+	.star-ratings {
+		max-width: 110px;
+		margin-top: 10px;
+	}
+	ul.aggregate-ratings-box {
+		padding: 0;
+		list-style-type: none;
+		margin: 0;
+	}
+	.aggregate-ratings-box li {
+		display: inline-block;
+	}
+	.aggregate-ratings-box li:first-child {
+		padding-right: 8px;
+		position: relative;
+		top: -6px;
+		border-right: solid 1px #b1b1b1;
+	}
+	.result-container h4,
+	.result-container h4 a {
+	    color:#666;
+		opacity: 0.9;
+		font-size: 18px;
 	}
 
 	@media (max-width:767px) {
