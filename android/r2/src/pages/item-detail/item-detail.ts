@@ -86,8 +86,8 @@ export class ItemDetailPage{
 	  me.searchDone = true;
 	  var tmp = resp.json();
 	  if(tmp){		  
-		  for(var i=0; i< tmp["restaurantSearchResult"].length;i++){
-			me.resultItems.push(tmp["restaurantSearchResult"][i]);
+		  for(var i=0; i< tmp["restaurant"].length;i++){
+			me.resultItems.push(tmp["restaurant"][i]);
 		  }
 	  }
   

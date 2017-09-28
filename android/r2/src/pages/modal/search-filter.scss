@@ -145,6 +145,10 @@ search-filter {
 	.btn-group.btn-group-justified {
 		margin-top: 15px;
 	}
+	.disabled-btn {
+	    opacity:0.5;
+	    pointer-events: none;
+	}
 
 	@media (max-width:767px) {
 		.result-filter {

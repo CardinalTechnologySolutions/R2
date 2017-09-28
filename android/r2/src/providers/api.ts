@@ -7,8 +7,12 @@ import 'rxjs/add/operator/map';
  */
 @Injectable()
 export class Api {
+	//url: string = 'http://localhost:8080/ctsr3services';
 	/*url: string = 'http://192.168.1.222:8080/ctswebscrapingservices';*/
-	url: string = 'http://14.141.82.190:8080/ctswebscrapingservices';
+	url: string = 'http://14.141.82.190:8080/ctsr3services';
+	
+	
+	
   constructor(public http: Http) {
   }
 
