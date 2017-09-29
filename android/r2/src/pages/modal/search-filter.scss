@@ -149,6 +149,10 @@ search-filter {
 	    opacity:0.5;
 	    pointer-events: none;
 	}
+	.star-rate {
+		max-width: 21px;
+		display: inline-block;
+	}
 
 	@media (max-width:767px) {
 		.result-filter {
