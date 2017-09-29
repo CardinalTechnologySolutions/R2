@@ -56,13 +56,6 @@
           </div>
           <div class="col-sm-4 padding0 mobile-padding">
             <h4><a href="#">{{item.title}} </a></h4>
-            <ul class="meta-search">
-              <li>
-                <div class="rating avg-rating">
-                  <img class="img-responsive" src="assets/img/rating/{{item.aggregateRatingStar}}" alt="">
-                </div>
-              </li>
-            </ul>
             <div class="hotel-address">New York, 0.4 km to Empire State Building (City centre)</div>
             <div class="review-count">80/100(655 review)</div>
           </div>
@@ -72,7 +65,7 @@
               <p>Trip Advisor</p>
  			  		<div class="google-count-box">
 						<div class="shape">
-							<div class="shape-text">1000</div>
+							<div class="shape-text">{{item.tripAdvRevCount?item.tripAdvRevCount:0}}</div>
 						</div>
 						<div class="count-content">
 							<a href="#" class="lead count">
@@ -94,7 +87,7 @@
 				  <p>Google</p>
  					<div class="google-count-box">
 						<div class="shape">
-							<div class="shape-text">0</div>
+							<div class="shape-text">{{item.googleRevCount?item.googleRevCount:0}}</div>
 						</div>
 						<div class="count-content">
 							<a href="#" class="lead count">
@@ -107,7 +100,7 @@
               <p>Yelp</p>
  					<div class="google-count-box">
 						<div class="shape">
-							<div class="shape-text">100</div>
+							<div class="shape-text">{{item.yelpRevCount?item.yelpRevCount:0}}</div>
 						</div>
 						<div class="count-content">
 							<a href="#" class="lead count">
@@ -120,7 +113,7 @@
               <p>Four Square</p>
 			  		<div class="google-count-box">
 						<div class="shape">
-							<div class="shape-text">5000</div>
+							<div class="shape-text">{{item.fourSquareRevCount?item.fourSquareRevCount:0}}</div>
 						</div>
 						<div class="count-content">
 							<a href="#" class="lead count">
